@@ -1,6 +1,6 @@
 ### Libraries🔭
 
-[Smart.Resolver](https://github.com/usausa/Smart-Net-Resolver) [![GitHub stars](https://img.shields.io/github/stars/usausa/Smart-Net-Resolver?style=social) Dependency resolver library support for Xamarin and ASP.NET Core  
+[Smart.Resolver](https://github.com/usausa/Smart-Net-Resolver) ![GitHub stars](https://img.shields.io/github/stars/usausa/Smart-Net-Resolver?style=social) Dependency resolver library support for Xamarin and ASP.NET Core  
 [Smart.Navigation](https://github.com/usausa/Smart-Net-Navigation) View navigation library for Xamarin.Forms/WPF/Windows.Forms  
 [Smart.Data.Accessor](https://github.com/usausa/Smart-Net-Data-Accessor) 2-way/outeside SQL data accessor generator library  
 [Smart.Data.Mapper](https://github.com/usausa/Smart-Net-Data-Mapper) Micro-ORM  
