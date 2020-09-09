@@ -1,4 +1,4 @@
-### Libraries🔭
+### 🔭 Libraries
 
 [Smart.Data.Accessor](https://github.com/usausa/Smart-Net-Data-Accessor) 2-way/outeside SQL data accessor generator library  
 [Smart.Data.Mapper](https://github.com/usausa/Smart-Net-Data-Mapper) Micro-ORM  
