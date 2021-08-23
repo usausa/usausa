@@ -7,7 +7,7 @@
 [Smart.Forms](https://github.com/usausa/Smart-Net-Forms) MVVM support library for Xamarin.Forms  
 [Smart.Windows](https://github.com/usausa/Smart-Net-Windows) MVVM support library for WPF  
 [Smart.ByteMapper](https://github.com/usausa/Smart-Net-ByteMapper) Byte array object mapper  
-[Smart.Text.Javanease](https://github.com/usausa/Smart-Net-Text-Japanese) Japanease kana converter library  
+[Smart.Text.Japanease](https://github.com/usausa/Smart-Net-Text-Japanese) Japanease kana converter library  
 [Smart.Mock.Data](https://github.com/usausa/Smart-Net-Mock-Data) ADO.NET mock library  
 
 
