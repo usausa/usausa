@@ -9,7 +9,7 @@
 [Smart.ByteMapper](https://github.com/usausa/Smart-Net-ByteMapper) Byte array object mapper  
 [Smart.Text.Japanease](https://github.com/usausa/Smart-Net-Text-Japanese) Japanease kana converter library  
 [Smart.Mock.Data](https://github.com/usausa/Smart-Net-Mock-Data) ADO.NET mock library  
-[Smart-Net-Mapper](https://github.com/usausa/Smart-Net-Mapper) Object mapper (preview)  
+[Smart.Net.Mapper(preview)](https://github.com/usausa/Smart-Net-Mapper) Object mapper  
 
 <!--
 **usausa/usausa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
