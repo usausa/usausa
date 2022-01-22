@@ -26,6 +26,10 @@
 [![Rester](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Rester)](https://github.com/usausa/Rester)
 [![SqlBulkCopy](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=SqlBulkLoader)](https://github.com/usausa/SqlBulkLoader)
 
+# :computer: Service
+
+[![Windows Service remote deploy tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=service-deploy-agent)](https://github.com/usausa/https://github.com/usausa/service-deploy-agent)
+
 # :rotating_light: Monitor
 
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
