@@ -11,6 +11,14 @@
 [Smart.Mock.Data](https://github.com/usausa/Smart-Net-Mock-Data) ADO.NET mock library  
 [Smart.Net.Mapper(preview)](https://github.com/usausa/Smart-Net-Mapper) Object mapper  
 
+[Rester](https://github.com/usausa/Rester) HttpClient extensions for rest api  
+[SqlBulkCopy](https://github.com/usausa/SqlBulkLoader) SqlBulkCopy helper
+
+[AmazonLambdaExtension](https://github.com/usausa/amazon-lambda-extension) AWS Lambda Extension for .NET
+
+[TuringSmartScreenLib](https://github.com/usausa/turing-smart-screen) Turing Smart Screen controller library
+
+
 <!--
 **usausa/usausa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
