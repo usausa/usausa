@@ -26,6 +26,12 @@
 [![Rester](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Rester)](https://github.com/usausa/Rester)
 [![SqlBulkCopy](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=SqlBulkLoader)](https://github.com/usausa/SqlBulkLoader)
 
+# :rotating_light: Monitor
+
+[![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
+[![Sense Hat Server](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensehat-server)](https://github.com/usausa/sensehat-server)
+[![OMRON 2JCIE-BU01 Prometheus exporter](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensor-omron)](https://github.com/usausa/sensor-omron)
+
 # :game_die: Toy
 
 [![TuringSmartScreenLib](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=turing-smart-screen)](https://github.com/usausa/turing-smart-screen)
