@@ -1,35 +1,32 @@
-### 🔭 Libraries
+# :four_leaf_clover: Smart
 
-[Smart.Data.Accessor](https://github.com/usausa/Smart-Net-Data-Accessor) 2-way/outeside SQL data accessor generator library  
-[Smart.Data.Mapper](https://github.com/usausa/Smart-Net-Data-Mapper) Micro-ORM  
-[Smart.Navigation](https://github.com/usausa/Smart-Net-Navigation) View navigation library for Xamarin.Forms/WPF/Windows.Forms  
-[Smart.Resolver](https://github.com/usausa/Smart-Net-Resolver) Dependency resolver library support for Xamarin and ASP.NET Core  
-[Smart.Forms](https://github.com/usausa/Smart-Net-Forms) MVVM support library for Xamarin.Forms  
-[Smart.Windows](https://github.com/usausa/Smart-Net-Windows) MVVM support library for WPF  
-[Smart.ByteMapper](https://github.com/usausa/Smart-Net-ByteMapper) Byte array object mapper  
-[Smart.Text.Japanease](https://github.com/usausa/Smart-Net-Text-Japanese) Japanease kana converter library  
-[Smart.Mock.Data](https://github.com/usausa/Smart-Net-Mock-Data) ADO.NET mock library  
-[Smart.Net.Mapper(preview)](https://github.com/usausa/Smart-Net-Mapper) Object mapper  
+[![Smart.Data.Accessor](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Data-Accessor)](https://github.com/usausa/Smart-Net-Data-Accessor)
+[![Smart.Data.Mapper](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Data-Mapper)](https://github.com/usausa/Smart-Net-Data-Mapper)
+[![Smart.Navigation](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Navigation)](https://github.com/usausa/Smart-Net-Navigation)
+[![Smart.Navigation](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Navigation)](https://github.com/usausa/Smart-Net-Navigation)
+[![Smart.Resolver](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Resolver)](https://github.com/usausa/Smart-Net-Resolver)
+[![Smart.Forms](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Forms)](https://github.com/usausa/Smart-Net-Forms)
+[![Smart.Windows](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Windows)](https://github.com/usausa/Smart-Net-Windows)
+[![Smart.ByteMapper](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-ByteMapper)](https://github.com/usausa/Smart-Net-ByteMapper)
+[![Smart.Text.Japanease](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Text-Japanese)](https://github.com/usausa/Smart-Net-Text-Japanese)
+[![Smart.Mock.Data](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Mock-Data)](https://github.com/usausa/Smart-Net-Mock-Data)
+[![Smart.AspNetCore](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-AspNetCore)](https://github.com/usausa/Smart-Net-AspNetCore)
+[![Smart.Mapper](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Mapper)](https://github.com/usausa/Smart-Net-Mapper)
+[![Smart.Core](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net)](https://github.com/usausa/Smart-Net)
+[![Smart.Converter](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Converter)](https://github.com/usausa/Smart-Net-Converter)
+[![Smart.Data](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Data)](https://github.com/usausa/Smart-Net-Data)
+[![Smart.Reactive](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Reactive)](https://github.com/usausa/Smart-Net-Reactive)
 
-[Rester](https://github.com/usausa/Rester) HttpClient extensions for rest api  
-[SqlBulkCopy](https://github.com/usausa/SqlBulkLoader) SqlBulkCopy helper
+# :factory: Generator & Analyzer
 
-[AmazonLambdaExtension](https://github.com/usausa/amazon-lambda-extension) AWS Lambda Extension for .NET
+[![AmazonLambdaExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=amazon-lambda-extension)](https://github.com/usausa/amazon-lambda-extension)
+[![Smart.Analyzers.JapaneseComment](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Analyzers-JapaneseComment)](https://github.com/usausa/Smart-Net-Analyzers-JapaneseComment)
 
-[TuringSmartScreenLib](https://github.com/usausa/turing-smart-screen) Turing Smart Screen controller library
+# :wrench: Helper
 
+[![Rester](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Rester)](https://github.com/usausa/Rester)
+[![SqlBulkCopy](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=SqlBulkLoader)](https://github.com/usausa/SqlBulkLoader)
 
-<!--
-**usausa/usausa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# :game_die: Toy
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[![TuringSmartScreenLib](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=turing-smart-screen)](https://github.com/usausa/turing-smart-screen)
