@@ -28,7 +28,7 @@
 
 # :computer: Service
 
-[![Windows Service remote deploy tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=service-deploy-agent)](https://github.com/usausa/https://github.com/usausa/service-deploy-agent)
+[![Windows Service remote deploy tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=service-deploy-agent)](https://github.com/usausa/service-deploy-agent)
 
 # :rotating_light: Monitor
 
