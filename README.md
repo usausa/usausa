@@ -3,7 +3,6 @@
 [![Smart.Data.Accessor](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Data-Accessor)](https://github.com/usausa/Smart-Net-Data-Accessor)
 [![Smart.Data.Mapper](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Data-Mapper)](https://github.com/usausa/Smart-Net-Data-Mapper)
 [![Smart.Navigation](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Navigation)](https://github.com/usausa/Smart-Net-Navigation)
-[![Smart.Navigation](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Navigation)](https://github.com/usausa/Smart-Net-Navigation)
 [![Smart.Resolver](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Resolver)](https://github.com/usausa/Smart-Net-Resolver)
 [![Smart.Forms](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Forms)](https://github.com/usausa/Smart-Net-Forms)
 [![Smart.Windows](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Windows)](https://github.com/usausa/Smart-Net-Windows)
