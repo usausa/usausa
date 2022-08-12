@@ -27,7 +27,8 @@
 
 [![AzureFunctionsExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=azure-functions-extension)](https://github.com/usausa/azure-functions-extension)
 [![Rester](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Rester)](https://github.com/usausa/Rester)
-[![SqlBulkCopy](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=SqlBulkLoader)](https://github.com/usausa/SqlBulkLoader)
+[![SqlBulkLoader](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=SqlBulkLoader)](https://github.com/usausa/SqlBulkLoader)
+[![MySqlBulkLoader](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=MySqlBulkLoader)](https://github.com/usausa/MySqlBulkLoader)
 
 # :computer: Service
 
