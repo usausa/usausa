@@ -30,7 +30,7 @@
 [![Rester](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Rester)](https://github.com/usausa/Rester)
 [![SqlBulkLoader](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=SqlBulkLoader)](https://github.com/usausa/SqlBulkLoader)
 [![MySqlBulkLoader](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=MySqlBulkLoader)](https://github.com/usausa/MySqlBulkLoader)
-[![HostedServiceExtensions](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hostedservice-extension-for-net)](https://github.com/usausa/hostedservice-extension-for-net)
+[![HostedServiceExtensions](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hosted-service-extension)](https://github.com/usausa/hosted-service-extension)
 
 # :computer: Service
 
