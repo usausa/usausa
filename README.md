@@ -31,7 +31,6 @@
 [![SqlBulkLoader](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=SqlBulkLoader)](https://github.com/usausa/SqlBulkLoader)
 [![MySqlBulkLoader](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=MySqlBulkLoader)](https://github.com/usausa/MySqlBulkLoader)
 [![HostedServiceExtensions](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hosted-service-extension)](https://github.com/usausa/hosted-service-extension)
-[![OpenTelemetryExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=opentelemetry-extension)](https://github.com/usausa/opentelemetry-extension)
 
 # :computer: Service
 
@@ -39,6 +38,7 @@
 
 # :rotating_light: Monitor
 
+[![OpenTelemetryExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=opentelemetry-extension)](https://github.com/usausa/opentelemetry-extension)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![Sense Hat Server](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensehat-server)](https://github.com/usausa/sensehat-server)
 [![OMRON 2JCIE-BU01 Prometheus exporter](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensor-omron)](https://github.com/usausa/sensor-omron)
