@@ -24,6 +24,7 @@
 [![Smart.Analyzers.JapaneseComment](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Analyzers-JapaneseComment)](https://github.com/usausa/Smart-Net-Analyzers-JapaneseComment)
 [![EmbeddedBuildProperty](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=embedded-build-property)](https://github.com/usausa/embedded-build-property)
 [![CommonCodeGenerator](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=common-code-generator)](https://github.com/usausa/common-code-generator)
+[![MemberAccessorGenerator](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=common-code-generator)](https://github.com/usausa/common-code-generator)
 [![AutoMapperFragmentConfig](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=AutoMapperFragmentConfig)](https://github.com/usausa/AutoMapperFragmentConfig)
 
 # :wrench: Helper
