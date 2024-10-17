@@ -46,7 +46,6 @@
 [![OpenTelemetryExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=opentelemetry-extension)](https://github.com/usausa/opentelemetry-extension)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![Sense Hat Server](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensehat-server)](https://github.com/usausa/sensehat-server)
-[![OMRON 2JCIE-BU01 Prometheus exporter .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensor-omron-telemetry)](https://github.com/usausa/sensor-omron-telemetry)
 [![OMRON 2JCIE-BU01 Prometheus exporter Python](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensor-omron)](https://github.com/usausa/sensor-omron)
 
 # :game_die: Toy
