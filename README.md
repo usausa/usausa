@@ -37,17 +37,15 @@
 [![Extensions.Configuration.Sqlite](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=extensions-configuration-sqlite)](https://github.com/usausa/extensions-configuration-sqlite)
 [![HostedServiceExtensions](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hosted-service-extension)](https://github.com/usausa/hosted-service-extension)
 
-# :computer: Service
+# :control_knobs: Device
 
-[![Windows Service remote deploy tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=service-deploy-agent)](https://github.com/usausa/service-deploy-agent)
-
-# :rotating_light: Monitor
-
+[![TuringSmartScreenLib](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=turing-smart-screen)](https://github.com/usausa/turing-smart-screen)
 [![OpenTelemetryExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=opentelemetry-extension)](https://github.com/usausa/opentelemetry-extension)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![Sense Hat Server](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensehat-server)](https://github.com/usausa/sensehat-server)
 [![OMRON 2JCIE-BU01 Prometheus exporter Python](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensor-omron)](https://github.com/usausa/sensor-omron)
 
-# :game_die: Toy
+# :computer: Service
 
-[![TuringSmartScreenLib](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=turing-smart-screen)](https://github.com/usausa/turing-smart-screen)
+[![Windows Service remote deploy tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=service-deploy-agent)](https://github.com/usausa/service-deploy-agent)
+
