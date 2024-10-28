@@ -40,11 +40,11 @@
 # :control_knobs: Device
 
 [![TuringSmartScreenLib](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=turing-smart-screen)](https://github.com/usausa/turing-smart-screen)
-[![Bluetooth Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bt-tool)](https://github.com/usausa/bt-tool)
-[![MESH Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mesh-tool)](https://github.com/usausa/mesh-tool)
+[![Telemetry Service](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=telemetry-service)](https://github.com/usausa/telemetry-service)
 [![RS-WFWATTCH2 library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-wfwattch2)](https://github.com/usausa/devicelib-wfwattch2)
 [![OMRON 2JCIE-BU library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-sensor-omron)](https://github.com/usausa/devicelib-sensor-omron)
-[![OpenTelemetryExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=opentelemetry-extension)](https://github.com/usausa/opentelemetry-extension)
+[![Bluetooth Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bt-tool)](https://github.com/usausa/bt-tool)
+[![MESH Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mesh-tool)](https://github.com/usausa/mesh-tool)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![Sense Hat Server](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensehat-server)](https://github.com/usausa/sensehat-server)
 [![OMRON 2JCIE-BU01 Prometheus exporter Python](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensor-omron)](https://github.com/usausa/sensor-omron)
