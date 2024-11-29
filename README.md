@@ -40,7 +40,7 @@
 # :control_knobs: Device
 
 [![TuringSmartScreenLib](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=turing-smart-screen)](https://github.com/usausa/turing-smart-screen)
-[![Telemetry Service](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=telemetry-service)](https://github.com/usausa/telemetry-service)
+[![Prometheus Exporter alternative](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=prometheus-exporter-alternative)](https://github.com/usausa/prometheus-exporter-alternative)
 [![RS-WFWATTCH2 library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-wfwattch2)](https://github.com/usausa/devicelib-wfwattch2)
 [![OMRON 2JCIE-BU library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-sensor-omron)](https://github.com/usausa/devicelib-sensor-omron)
 [![Disk information library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hardwareinfo-disk)](https://github.com/usausa/hardwareinfo-disk)
