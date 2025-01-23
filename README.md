@@ -50,7 +50,6 @@
 [![MESH Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mesh-tool)](https://github.com/usausa/mesh-tool)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![Sense Hat Server](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensehat-server)](https://github.com/usausa/sensehat-server)
-[![OMRON 2JCIE-BU01 Prometheus exporter Python](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensor-omron)](https://github.com/usausa/sensor-omron)
 
 # :computer: Service
 
