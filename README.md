@@ -24,7 +24,7 @@
 [![AmazonLambdaExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=amazon-lambda-extension)](https://github.com/usausa/amazon-lambda-extension)
 [![AutoMapperFragmentConfig](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=AutoMapperFragmentConfig)](https://github.com/usausa/AutoMapperFragmentConfig)
 [![BunnyTail.ServiceRegistrationGenerator](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=service-registration-generator)](https://github.com/usausa/service-registration-generator)
-[![EmbeddedBuildProperty](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=embedded-build-property)](https://github.com/usausa/embedded-build-property)
+[![BunnyTail.EmbeddedBuildProperty](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=embedded-build-property)](https://github.com/usausa/embedded-build-property)
 [![CommonCodeGenerator](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=common-code-generator)](https://github.com/usausa/common-code-generator)
 [![MemberAccessorGenerator](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=member-accessor-generator)](https://github.com/usausa/member-accessor-generator)
 
