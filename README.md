@@ -47,6 +47,7 @@
 [![RS-WFWATTCH2 library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-wfwattch2)](https://github.com/usausa/devicelib-wfwattch2)
 [![OMRON 2JCIE-BU library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-sensor-omron)](https://github.com/usausa/devicelib-sensor-omron)
 [![Bluetooth Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bt-tool)](https://github.com/usausa/bt-tool)
+[![Divoom Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=divoom-tool)](https://github.com/usausa/divoom-tool)
 [![PATLITE Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=patlite-tool)](https://github.com/usausa/patlite-tool)
 [![MESH Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mesh-tool)](https://github.com/usausa/mesh-tool)
 [![Sense Hat Server](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=sensehat-server)](https://github.com/usausa/sensehat-server)
