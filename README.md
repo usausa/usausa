@@ -45,6 +45,7 @@
 [![Disk information library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hardwareinfo-disk)](https://github.com/usausa/hardwareinfo-disk)
 [![Prometheus Exporter alternative](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=prometheus-exporter-alternative)](https://github.com/usausa/prometheus-exporter-alternative)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
+[![Prometheus tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=prometheus-tool)](https://github.com/usausa/prometheus-tool)
 [![RS-WFWATTCH2 library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-wfwattch2)](https://github.com/usausa/devicelib-wfwattch2)
 [![OMRON 2JCIE-BU library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-sensor-omron)](https://github.com/usausa/devicelib-sensor-omron)
 [![Bluetooth Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bt-tool)](https://github.com/usausa/bt-tool)
