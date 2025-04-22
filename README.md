@@ -33,7 +33,6 @@
 [![AzureFunctionsExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=azure-functions-extension)](https://github.com/usausa/azure-functions-extension)
 [![Rester](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Rester)](https://github.com/usausa/Rester)
 [![MiniDataProfiler](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mini-data-profiler)](https://github.com/usausa/mini-data-profiler)
-[![DataReaderAdapter](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=data-reader-adapter)](https://github.com/usausa/data-reader-adapter)
 [![NpgsqlBulkHelper](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=npgsql-bulk-helper)](https://github.com/usausa/npgsql-bulk-helper)
 [![Mofucat.DataToolkit](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=data-toolkit)](https://github.com/usausa/data-toolkit)
 [![Extensions.Configuration.Sqlite](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=extensions-configuration-sqlite)](https://github.com/usausa/extensions-configuration-sqlite)
