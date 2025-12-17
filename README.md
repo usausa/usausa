@@ -44,7 +44,6 @@
 [![Disk information library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hardwareinfo-disk)](https://github.com/usausa/hardwareinfo-disk)
 [![Prometheus Exporter alternative](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=prometheus-exporter-alternative)](https://github.com/usausa/prometheus-exporter-alternative)
 [![Prometheus tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=prometheus-tool)](https://github.com/usausa/prometheus-tool)
-[![PlatformInfo](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=platform-info)](https://github.com/usausa/platform-info)
 [![LinuxDotNet](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=linux-dotnet)](https://github.com/usausa/linux-dotnet)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![RS-WFWATTCH2 library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-wfwattch2)](https://github.com/usausa/devicelib-wfwattch2)
