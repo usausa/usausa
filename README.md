@@ -8,7 +8,7 @@
 [![Smart.Windows](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Windows)](https://github.com/usausa/Smart-Net-Windows)
 [![Smart.Maui](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Maui)](https://github.com/usausa/Smart-Net-Maui)
 [![Smart.Avalonia](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Avalonia)](https://github.com/usausa/Smart-Net-Avalonia)
-[![Smart.Console](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Console)](https://github.com/usausa/Smart-Net-Console)
+[![Smart.CommandLine](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-CommandLine)](https://github.com/usausa/Smart-Net-CommandLine)
 [![Smart.ByteMapper](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-ByteMapper)](https://github.com/usausa/Smart-Net-ByteMapper)
 [![Smart.Text.Japanease](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Text-Japanese)](https://github.com/usausa/Smart-Net-Text-Japanese)
 [![Smart.Mock.Data](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Mock-Data)](https://github.com/usausa/Smart-Net-Mock-Data)
