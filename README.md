@@ -51,7 +51,7 @@
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![RS-WFWATTCH2 library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-wfwattch2)](https://github.com/usausa/devicelib-wfwattch2)
 [![OMRON 2JCIE-BU library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-sensor-omron)](https://github.com/usausa/devicelib-sensor-omron)
-[![Bluetooth Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mcp2221-managed-wrapper)](https://github.com/usausa/mcp2221-managed-wrapper)
+[![MCP2221 unmaged wrapper](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mcp2221-managed-wrapper)](https://github.com/usausa/mcp2221-managed-wrapper)
 [![Bluetooth Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bt-tool)](https://github.com/usausa/bt-tool)
 [![PATLITE Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=patlite-tool)](https://github.com/usausa/patlite-tool)
 [![Divoom Tool](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=divoom-tool)](https://github.com/usausa/divoom-tool)
