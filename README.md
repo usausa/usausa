@@ -48,7 +48,7 @@
 [![Disk information library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=hardwareinfo-disk)](https://github.com/usausa/hardwareinfo-disk)
 [![MacDotNet](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mac-dotnet)](https://github.com/usausa/mac-dotnet)
 [![LinuxDotNet](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=linux-dotnet)](https://github.com/usausa/linux-dotnet)
-[![RaspberryDotNet](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mac-dotnet)](https://github.com/usausa/raspberrypi-dotnet)
+[![RaspberryDotNet](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=raspberrypi-dotnet)](https://github.com/usausa/raspberrypi-dotnet)
 [![Prometheus Exporter alternative](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=prometheus-exporter-alternative)](https://github.com/usausa/prometheus-exporter-alternative)
 [![Munin node alternative .NET](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=munin-node-alternative)](https://github.com/usausa/munin-node-alternative)
 [![RS-WFWATTCH2 library](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=devicelib-wfwattch2)](https://github.com/usausa/devicelib-wfwattch2)
