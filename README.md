@@ -41,6 +41,7 @@
 [![Mofucat.MicroHost](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mofucat-micro-host)](https://github.com/usausa/mofucat-micro-host)
 [![Mofucat.SqliteConfiguration](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mofucat-sqlite-configuration)](https://github.com/usausa/mofucat-sqlite-configuration)
 [![Mofucat.TcpService](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mofucat-tcp-service)](https://github.com/usausa/mofucat-tcp-service)
+[![Mofucat.JobScheduler](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=mofucat-job-scheduler)](https://github.com/usausa/mofucat-job-scheduler)
 [![AzureFunctionsExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=azure-functions-extension)](https://github.com/usausa/azure-functions-extension)
 
 # :control_knobs: Device
