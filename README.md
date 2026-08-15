@@ -23,10 +23,11 @@
 # :factory: Generator & Analyzer
 
 [![Smart.Analyzers.JapaneseComment](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=Smart-Net-Analyzers-JapaneseComment)](https://github.com/usausa/Smart-Net-Analyzers-JapaneseComment)
-[![BunnyTail.ServiceRegistration](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bunnytail-service-registration)](https://github.com/usausa/bunnytail-service-registration)
-[![BunnyTail.EmbeddedBuildProperty](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bunnytail-embedded-build-property)](https://github.com/usausa/bunnytail-embedded-build-property)
 [![BunnyTail.CommonCode](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bunnytail-common-code)](https://github.com/usausa/bunnytail-common-code)
 [![BunnyTail.MemberAccessor](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bunnytail-member-accessor)](https://github.com/usausa/bunnytail-member-accessor)
+[![BunnyTail.Resolver](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bunnytail-resolver)](https://github.com/usausa/bunnytail-resolver)
+[![BunnyTail.ServiceRegistration](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bunnytail-service-registration)](https://github.com/usausa/bunnytail-service-registration)
+[![BunnyTail.EmbeddedBuildProperty](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=bunnytail-embedded-build-property)](https://github.com/usausa/bunnytail-embedded-build-property)
 [![AmazonLambdaExtension](https://github-readme-stats.vercel.app/api/pin/?username=usausa&repo=amazon-lambda-extension)](https://github.com/usausa/amazon-lambda-extension)
 
 # :wrench: Helper
