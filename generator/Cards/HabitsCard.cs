@@ -15,7 +15,7 @@ internal static class HabitsCard
     private const int PanelX = 508;
     private const int PanelColumn = 142;
 
-    private static readonly string[] DayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    private static readonly string[] DayNames = DateTimeFormatInfo.InvariantInfo.AbbreviatedDayNames;
 
     public static string Render(HabitStat habits, int offsetHours)
     {
@@ -47,7 +47,7 @@ internal static class HabitsCard
         var stats = new (string Label, string Value, bool Highlight)[]
         {
             ("peak hour", $"{habits.PeakHour:00}:00", true),
-            ("busiest day", DayNames[habits.BusiestDay], false),
+            ("busiest day", habits.BusiestDayName, false),
             ("commits", SvgBuilder.Number(habits.Total), false),
             ("active hours", $"{first:00}-{last:00}", false)
         };

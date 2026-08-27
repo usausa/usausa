@@ -26,7 +26,7 @@ Console.WriteLine($"  {profile.RepositoryCount} repos · {profile.TotalStars} st
 
 Console.WriteLine("Fetching commit times...");
 var habits = await github.GetHabitsAsync(settings.User, settings.TimeZoneOffsetHours);
-Console.WriteLine($"  {habits.Total} commits · peak {habits.PeakHour:00}:00 · busiest {habits.BusiestDay} · {habits.SkippedRepositories} repos not visible");
+Console.WriteLine($"  {habits.Total} commits · peak {habits.PeakHour:00}:00 · busiest {habits.BusiestDayName} · {habits.SkippedRepositories} repos not visible");
 
 Console.WriteLine("Fetching NuGet statistics...");
 using var nuget = new NuGetClient();

@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace StatsGenerator;
 
 internal sealed record Settings(
@@ -79,6 +81,8 @@ internal sealed record HabitStat(int[][] Grid, int Total, int SkippedRepositorie
             return totals.IndexOf(totals.DefaultIfEmpty(0).Max());
         }
     }
+
+    public string BusiestDayName => DateTimeFormatInfo.InvariantInfo.AbbreviatedDayNames[BusiestDay];
 
     public (int First, int Last) ActiveHours
     {

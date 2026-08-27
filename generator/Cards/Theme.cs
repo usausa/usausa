@@ -67,8 +67,6 @@ internal static class Theme
     // Chosen once from settings before the first card is rendered, because every card embeds the palette.
     private static Accent accent = Accents["green"];
 
-    public static IEnumerable<string> AccentNames => Accents.Keys;
-
     public static void UseAccent(string name)
     {
         if (!Accents.TryGetValue(name, out var selected))

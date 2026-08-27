@@ -138,6 +138,11 @@ request per repository the profile committed to, plus a page per 100 commits. Re
 cannot see are skipped and counted in the run log rather than failing the run, so the automatic
 `GITHUB_TOKEN` produces a histogram built from public commits only.
 
+Two limits are worth knowing about that card. `commitContributionsByRepository` returns at most 100
+repositories, so a profile that commits to more than that loses the tail - currently about 5% of the
+year's commits, which does not move the shape of the histogram. And the hours come from
+`committedDate`, so a rebase moves a commit to when it was replayed rather than when it was written.
+
 ```bash
 GITHUB_TOKEN=$(gh auth token) dotnet run --project generator -- --output dist
 ```
