@@ -75,10 +75,16 @@ internal sealed class GitHubClient : IDisposable
     // A runaway guard: no repository of this profile comes close, and it bounds the daily run.
     private const int MaxHistoryPages = 30;
 
+    private const string UnknownLanguageColor = "#8b949e";
+
     private readonly HttpClient client;
 
-    public GitHubClient(string token)
+    private readonly Dictionary<string, string> languageColors;
+
+    public GitHubClient(string token, IReadOnlyDictionary<string, string>? colorOverrides = null)
     {
+        languageColors = new Dictionary<string, string>(colorOverrides ?? new Dictionary<string, string>(), StringComparer.OrdinalIgnoreCase);
+
         client = new HttpClient();
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
         client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("usausa-stats-generator", "1.0"));
@@ -191,6 +197,10 @@ internal sealed class GitHubClient : IDisposable
         return new HabitStat(grid, total, skipped);
     }
 
+    // Linguist reassigns colors from time to time, so a language can be pinned in settings.
+    private string ColorOf(string language, string? reported) =>
+        languageColors.TryGetValue(language, out var pinned) ? pinned : reported ?? UnknownLanguageColor;
+
     private static CalendarStat ReadCalendar(JsonElement calendar)
     {
         var days = new List<int>();
@@ -229,18 +239,20 @@ internal sealed class GitHubClient : IDisposable
                 stars += node.GetProperty("stargazerCount").GetInt32();
                 forks += node.GetProperty("forkCount").GetInt32();
 
+                var primary = language.ValueKind == JsonValueKind.Null ? null : language.GetProperty("name").GetString();
+
                 repositories[name] = new RepositoryStat(
                     name,
                     node.GetProperty("description").GetString(),
-                    language.ValueKind == JsonValueKind.Null ? null : language.GetProperty("name").GetString(),
-                    language.ValueKind == JsonValueKind.Null ? null : language.GetProperty("color").GetString(),
+                    primary,
+                    primary is null ? null : ColorOf(primary, language.GetProperty("color").GetString()),
                     node.GetProperty("stargazerCount").GetInt32(),
                     node.GetProperty("forkCount").GetInt32());
 
                 foreach (var edge in node.GetProperty("languages").GetProperty("edges").EnumerateArray())
                 {
                     var languageName = edge.GetProperty("node").GetProperty("name").GetString()!;
-                    var color = edge.GetProperty("node").GetProperty("color").GetString() ?? "#8b949e";
+                    var color = ColorOf(languageName, edge.GetProperty("node").GetProperty("color").GetString());
                     var size = edge.GetProperty("size").GetInt64();
                     sizes[languageName] = sizes.TryGetValue(languageName, out var current)
                         ? (current.Color, current.Size + size)

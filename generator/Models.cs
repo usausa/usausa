@@ -5,7 +5,8 @@ internal sealed record Settings(
     NuGetSettings NuGet,
     CategorySettings[] Categories,
     string Accent = "green",
-    int TimeZoneOffsetHours = 0)
+    int TimeZoneOffsetHours = 0,
+    Dictionary<string, string>? LanguageColors = null)
 {
     public IEnumerable<RepositorySettings> AllRepositories => Categories.SelectMany(static x => x.Repositories);
 }

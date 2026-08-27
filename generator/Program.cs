@@ -20,7 +20,7 @@ var settings = JsonSerializer.Deserialize<Settings>(
 Theme.UseAccent(settings.Accent);
 
 Console.WriteLine($"Fetching GitHub statistics for {settings.User}...");
-using var github = new GitHubClient(token);
+using var github = new GitHubClient(token, settings.LanguageColors);
 var profile = await github.GetProfileAsync(settings.User);
 Console.WriteLine($"  {profile.RepositoryCount} repos · {profile.TotalStars} stars · {profile.Calendar.Total} contributions · {profile.Languages.Length} languages");
 

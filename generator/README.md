@@ -48,6 +48,17 @@ Besides the repository list, `settings.json` carries:
 | --- | --- |
 | `accent` | The hue shared by the heatmap, the activity line, and the download bars |
 | `timeZoneOffsetHours` | The zone the commit hours are reported in; `9` for JST |
+| `languageColors` | Language colors to use instead of the ones the API reports |
+
+Language swatches on the languages card and the repository cards come from Linguist through the API.
+Linguist reassigns colors from time to time - C# moved from `#178600` to the .NET purple `#7355dd` -
+so `languageColors` pins the ones that should not follow:
+
+```json
+"languageColors": {
+  "C#": "#178600"
+}
+```
 
 `accent` accepts `green`, `blue`, `purple`, `orange`, `teal`, or `pink`. Each one ships a light and a
 dark ramp, so the cards stay readable in both schemes. An unknown name fails the run rather than
