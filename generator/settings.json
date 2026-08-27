@@ -1,0 +1,281 @@
+{
+  "user": "usausa",
+  "nuget": {
+    "owner": "machi_pon",
+    "prefixes": [
+      "Usa.",
+      "BunnyTail.",
+      "Mofucat.",
+      "Rester",
+      "TuringSmartScreenLib",
+      "HardwareInfo",
+      "DeviceLib",
+      "MiniDataProfiler",
+      "NpgsqlBulkHelper",
+      "AmazonLambdaExtension",
+      "AzureFunctionsExtension",
+      "MacDotNet",
+      "LinuxDotNet",
+      "RaspberryDotNet"
+    ]
+  },
+  "categories": [
+    {
+      "title": ":four_leaf_clover: Smart",
+      "repositories": [
+        {
+          "name": "Smart-Net-Data-Accessor",
+          "label": "Smart.Data.Accessor"
+        },
+        {
+          "name": "Smart-Net-Data-Mapper",
+          "label": "Smart.Data.Mapper"
+        },
+        {
+          "name": "Smart-Net-Navigation",
+          "label": "Smart.Navigation"
+        },
+        {
+          "name": "Smart-Net-Resolver",
+          "label": "Smart.Resolver"
+        },
+        {
+          "name": "Smart-Net-Mvvm",
+          "label": "Smart.Mvvm"
+        },
+        {
+          "name": "Smart-Net-Windows",
+          "label": "Smart.Windows"
+        },
+        {
+          "name": "Smart-Net-Maui",
+          "label": "Smart.Maui"
+        },
+        {
+          "name": "Smart-Net-Avalonia",
+          "label": "Smart.Avalonia"
+        },
+        {
+          "name": "Smart-Net-CommandLine",
+          "label": "Smart.CommandLine"
+        },
+        {
+          "name": "Smart-Net-Text-Japanese",
+          "label": "Smart.Text.Japanease"
+        },
+        {
+          "name": "Smart-Net-Data",
+          "label": "Smart.Data"
+        },
+        {
+          "name": "Smart-Net-Mock-Data",
+          "label": "Smart.Mock.Data"
+        },
+        {
+          "name": "Smart-Net-AspNetCore",
+          "label": "Smart.AspNetCore"
+        },
+        {
+          "name": "Smart-Net-Blazor",
+          "label": "Smart.Blazor"
+        },
+        {
+          "name": "Smart-Net",
+          "label": "Smart.Core"
+        },
+        {
+          "name": "Smart-Net-ByteMapper",
+          "label": "Smart.ByteMapper"
+        },
+        {
+          "name": "Smart-Net-Converter",
+          "label": "Smart.Converter"
+        },
+        {
+          "name": "Smart-Net-Mapper",
+          "label": "Smart.Mapper"
+        },
+        {
+          "name": "Smart-Net-Reactive",
+          "label": "Smart.Reactive"
+        }
+      ]
+    },
+    {
+      "title": ":factory: Generator & Analyzer",
+      "repositories": [
+        {
+          "name": "Smart-Net-Analyzers-JapaneseComment",
+          "label": "Smart.Analyzers.JapaneseComment"
+        },
+        {
+          "name": "bunnytail-common-code",
+          "label": "BunnyTail.CommonCode"
+        },
+        {
+          "name": "bunnytail-member-accessor",
+          "label": "BunnyTail.MemberAccessor"
+        },
+        {
+          "name": "bunnytail-dependency-injection",
+          "label": "BunnyTail.DependencyInjection"
+        },
+        {
+          "name": "bunnytail-service-registration",
+          "label": "BunnyTail.ServiceRegistration"
+        },
+        {
+          "name": "bunnytail-embedded-build-property",
+          "label": "BunnyTail.EmbeddedBuildProperty"
+        },
+        {
+          "name": "amazon-lambda-extension",
+          "label": "AmazonLambdaExtension"
+        }
+      ]
+    },
+    {
+      "title": ":wrench: Helper",
+      "repositories": [
+        {
+          "name": "Rester",
+          "label": "Rester"
+        },
+        {
+          "name": "oyster-report",
+          "label": "OysterReport"
+        },
+        {
+          "name": "mini-data-profiler",
+          "label": "MiniDataProfiler"
+        },
+        {
+          "name": "npgsql-bulk-helper",
+          "label": "NpgsqlBulkHelper"
+        },
+        {
+          "name": "mofucat-data-bridge",
+          "label": "Mofucat.DataBridge"
+        },
+        {
+          "name": "mofucat-serial-io",
+          "label": "Mofucat.SerialIO"
+        },
+        {
+          "name": "mofucat-micro-host",
+          "label": "Mofucat.MicroHost"
+        },
+        {
+          "name": "mofucat-sqlite-configuration",
+          "label": "Mofucat.SqliteConfiguration"
+        },
+        {
+          "name": "mofucat-tcp-service",
+          "label": "Mofucat.TcpService"
+        },
+        {
+          "name": "mofucat-job-scheduler",
+          "label": "Mofucat.JobScheduler"
+        },
+        {
+          "name": "azure-functions-extension",
+          "label": "AzureFunctionsExtension"
+        }
+      ]
+    },
+    {
+      "title": ":control_knobs: Device",
+      "repositories": [
+        {
+          "name": "prometheus-exporter-alternative",
+          "label": "Prometheus Exporter alternative"
+        },
+        {
+          "name": "mac-stat-display",
+          "label": "MacStatDisplay"
+        },
+        {
+          "name": "turing-smart-screen",
+          "label": "TuringSmartScreenLib"
+        },
+        {
+          "name": "hardwareinfo-disk",
+          "label": "Disk information library"
+        },
+        {
+          "name": "mac-dotnet",
+          "label": "MacDotNet"
+        },
+        {
+          "name": "linux-dotnet",
+          "label": "LinuxDotNet"
+        },
+        {
+          "name": "raspberrypi-dotnet",
+          "label": "RaspberryDotNet"
+        },
+        {
+          "name": "devicelib-wfwattch2",
+          "label": "RS-WFWATTCH2 library"
+        },
+        {
+          "name": "devicelib-sensor-omron",
+          "label": "OMRON 2JCIE-BU library"
+        },
+        {
+          "name": "mcp2221-managed-wrapper",
+          "label": "MCP2221 unmaged wrapper"
+        },
+        {
+          "name": "bt-tool",
+          "label": "Bluetooth Tool"
+        },
+        {
+          "name": "patlite-tool",
+          "label": "PATLITE Tool"
+        },
+        {
+          "name": "divoom-tool",
+          "label": "Divoom Tool"
+        },
+        {
+          "name": "mesh-tool",
+          "label": "MESH Tool"
+        },
+        {
+          "name": "munin-node-alternative",
+          "label": "Munin node alternative .NET"
+        },
+        {
+          "name": "sensehat-server",
+          "label": "Sense Hat Server"
+        }
+      ]
+    },
+    {
+      "title": ":computer: Service",
+      "repositories": [
+        {
+          "name": "raccoon-rdp-proxy",
+          "label": "RDP proxy service"
+        },
+        {
+          "name": "raccoon-dns-relay",
+          "label": "DNS relay service"
+        },
+        {
+          "name": "raccoon-auto-port-forward",
+          "label": "Auto port foward service"
+        },
+        {
+          "name": "storage-explore",
+          "label": "Storage Explore"
+        },
+        {
+          "name": "service-deploy-agent",
+          "label": "Windows Service remote deploy tool"
+        }
+      ]
+    }
+  ]
+}
