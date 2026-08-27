@@ -57,7 +57,8 @@ foreach (var entry in settings.AllRepositories)
     written++;
 }
 
-File.WriteAllText(Path.Combine(output, "index.html"), IndexPage.Render(settings, [.. summary.Keys], DateTimeOffset.UtcNow));
+var emoji = await EmojiResolver.LoadAsync(token);
+File.WriteAllText(Path.Combine(output, "index.html"), IndexPage.Render(settings, emoji, [.. summary.Keys], DateTimeOffset.UtcNow));
 File.WriteAllText(Path.Combine(output, ".nojekyll"), String.Empty);
 
 Console.WriteLine($"Wrote {summary.Count} summary cards and {written} repository cards to {Path.GetFullPath(output)}");

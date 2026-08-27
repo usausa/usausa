@@ -5,7 +5,7 @@ namespace StatsGenerator.Cards;
 // A browsable catalogue of everything the run produced, served from the same Pages site.
 internal static class IndexPage
 {
-    public static string Render(Settings settings, string[] summaryCards, DateTimeOffset generated)
+    public static string Render(Settings settings, EmojiResolver emoji, string[] summaryCards, DateTimeOffset generated)
     {
         var html = new StringBuilder();
         html.Append("<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\">");
@@ -31,7 +31,7 @@ internal static class IndexPage
 
         foreach (var category in settings.Categories)
         {
-            html.Append($"<h2>{SvgBuilder.Escape(category.Title)}</h2><div class=\"grid\">");
+            html.Append($"<h2>{SvgBuilder.Escape(emoji.Resolve(category.Title))}</h2><div class=\"grid\">");
             foreach (var repository in category.Repositories)
             {
                 var path = $"repo/{Uri.EscapeDataString(repository.Name)}.svg";
