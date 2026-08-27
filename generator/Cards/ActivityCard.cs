@@ -19,7 +19,7 @@ internal static class ActivityCard
     {
         var values = profile.Calendar.Recent(Days);
         var svg = new SvgBuilder(Width, Height, $"Contribution activity in the last {values.Length} days");
-        svg.Text(PadX, 24, 14, "tt", $"Contribution activity — last {values.Length} days", weight: 500);
+        svg.Text(PadX, 24, 14, "tt", $"Contribution activity - last {values.Length} days", weight: 500);
 
         if (values.Length < 2)
         {

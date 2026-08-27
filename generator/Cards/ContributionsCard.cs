@@ -2,7 +2,9 @@ namespace StatsGenerator.Cards;
 
 internal static class ContributionsCard
 {
-    private const int Width = 830;
+    // Two 400px cards plus the space the markdown renderer leaves between them, so the wide card lines
+    // up with the two-up rows in the README instead of overhanging them.
+    private const int Width = (RepositoryCard.Width * 2) + 4;
     private const int Height = 150;
     private const int PadX = 20;
     private const int GridX = 52;

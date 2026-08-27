@@ -1,9 +1,9 @@
-[![Contributions](https://usausa.github.io/usausa/contributions.svg)](https://github.com/usausa)
+![Contributions](https://usausa.github.io/usausa/contributions.svg)
 
 [![Stats](https://usausa.github.io/usausa/overview.svg)](https://github.com/usausa?tab=repositories)
 [![Languages](https://usausa.github.io/usausa/languages.svg)](https://github.com/usausa?tab=repositories)
 
-[![Activity](https://usausa.github.io/usausa/activity.svg)](https://github.com/usausa)
+![Activity](https://usausa.github.io/usausa/activity.svg)
 [![NuGet](https://usausa.github.io/usausa/nuget.svg)](https://www.nuget.org/profiles/machi_pon)
 
 # :four_leaf_clover: Smart

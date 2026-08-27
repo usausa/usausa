@@ -2,7 +2,8 @@ namespace StatsGenerator.Cards;
 
 internal static class RepositoryCard
 {
-    private const int Width = 400;
+    public const int Width = 400;
+
     private const int Height = 88;
     private const int PadX = 20;
     private const int TitleX = 44;
