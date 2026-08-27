@@ -1,5 +1,7 @@
 {
   "user": "usausa",
+  "accent": "blue",
+  "timeZoneOffsetHours": 9,
   "nuget": {
     "owner": "machi_pon",
     "prefixes": [

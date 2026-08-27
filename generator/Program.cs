@@ -17,10 +17,16 @@ var settings = JsonSerializer.Deserialize<Settings>(
     File.ReadAllText(settingsPath),
     new JsonSerializerOptions { PropertyNameCaseInsensitive = true })!;
 
+Theme.UseAccent(settings.Accent);
+
 Console.WriteLine($"Fetching GitHub statistics for {settings.User}...");
 using var github = new GitHubClient(token);
 var profile = await github.GetProfileAsync(settings.User);
 Console.WriteLine($"  {profile.RepositoryCount} repos · {profile.TotalStars} stars · {profile.Calendar.Total} contributions · {profile.Languages.Length} languages");
+
+Console.WriteLine("Fetching commit times...");
+var habits = await github.GetHabitsAsync(settings.User, settings.TimeZoneOffsetHours);
+Console.WriteLine($"  {habits.Total} commits · peak {habits.PeakHour:00}:00 · busiest {habits.BusiestDay} · {habits.SkippedRepositories} repos not visible");
 
 Console.WriteLine("Fetching NuGet statistics...");
 using var nuget = new NuGetClient();
@@ -34,6 +40,7 @@ var summary = new Dictionary<string, string>
 {
     ["overview.svg"] = OverviewCard.Render(profile),
     ["languages.svg"] = LanguagesCard.Render(profile),
+    ["habits.svg"] = HabitsCard.Render(habits, settings.TimeZoneOffsetHours),
     ["contributions.svg"] = ContributionsCard.Render(profile),
     ["activity.svg"] = ActivityCard.Render(profile),
     ["nuget.svg"] = NuGetCard.Render(packages)

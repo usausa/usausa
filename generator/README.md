@@ -11,7 +11,7 @@ No external NuGet packages are used, so the workflow only needs the .NET SDK.
 | Path | What it holds |
 | --- | --- |
 | `settings.json` | The user to report on, the NuGet id prefixes to search, and the repositories that get a card |
-| `GitHubClient.cs` | Profile, contribution calendar, repository list and language sizes |
+| `GitHubClient.cs` | Profile, contribution calendar, repository list, language sizes and commit times |
 | `NuGetClient.cs` | Package downloads |
 | `EmojiResolver.cs` | Expands `:shortcode:` in category titles for the index page |
 | `Cards/Theme.cs` | The light and dark palettes emitted into every card |
@@ -24,17 +24,35 @@ is what a viewer that ignores the query will show.
 
 ## Output
 
-| File | Size |
-| --- | --- |
-| `overview.svg` | 400x152 |
-| `languages.svg` | 400x152 |
-| `contributions.svg` | 804x150 |
-| `activity.svg` | 400x174 |
-| `nuget.svg` | 400x174 |
-| `repo/<repository>.svg` | 400x88 |
+| File | Size | In the README |
+| --- | --- | --- |
+| `habits.svg` | 804x178 | yes |
+| `overview.svg` | 400x152 | yes |
+| `languages.svg` | 400x152 | yes |
+| `activity.svg` | 400x174 | yes |
+| `nuget.svg` | 400x174 | yes |
+| `contributions.svg` | 804x150 | no, GitHub already draws the calendar on the profile |
+| `repo/<repository>.svg` | 400x88 | yes |
 
-The wide card is exactly two 400px cards plus the space the markdown renderer puts between them, so
-every row in the README lines up. Changing `RepositoryCard.Width` moves the wide card with it.
+The wide cards are exactly two 400px cards plus the space the markdown renderer puts between them, so
+every row in the README lines up. Changing `RepositoryCard.Width` moves the wide cards with it.
+
+`contributions.svg` is still generated and reachable on the site, so putting it back is a one-line
+change in `README.md`.
+
+## Settings
+
+Besides the repository list, `settings.json` carries:
+
+| Key | Meaning |
+| --- | --- |
+| `accent` | The hue shared by the heatmap, the activity line, and the download bars |
+| `timeZoneOffsetHours` | The zone the commit hours are reported in; `9` for JST |
+
+`accent` accepts `green`, `blue`, `purple`, `orange`, `teal`, or `pink`. Each one ships a light and a
+dark ramp, so the cards stay readable in both schemes. An unknown name fails the run rather than
+silently falling back. Adding one means adding an entry to `Accents` in `Cards/Theme.cs`; nothing in
+the cards refers to a color directly.
 
 ## Adding a repository card
 
@@ -103,6 +121,11 @@ gh api repos/usausa/usausa/pages/builds --jq '.[0] | "\(.status) \(.commit) \(.c
 
 A token is required because the contribution calendar is only available through the GraphQL API. Any
 token with `public_repo` scope works; the workflow passes the automatic `GITHUB_TOKEN`.
+
+A run takes about two minutes, nearly all of it walking commit history for the habits card: one
+request per repository the profile committed to, plus a page per 100 commits. Repositories the token
+cannot see are skipped and counted in the run log rather than failing the run, so the automatic
+`GITHUB_TOKEN` produces a histogram built from public commits only.
 
 ```bash
 GITHUB_TOKEN=$(gh auth token) dotnet run --project generator -- --output dist

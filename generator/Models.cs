@@ -3,7 +3,9 @@ namespace StatsGenerator;
 internal sealed record Settings(
     string User,
     NuGetSettings NuGet,
-    CategorySettings[] Categories)
+    CategorySettings[] Categories,
+    string Accent = "green",
+    int TimeZoneOffsetHours = 0)
 {
     public IEnumerable<RepositorySettings> AllRepositories => Categories.SelectMany(static x => x.Repositories);
 }
@@ -59,6 +61,36 @@ internal sealed record CalendarStat(DateOnly FirstDay, int[] Days)
     }
 
     public int[] Recent(int count) => Days.Length <= count ? Days : Days[^count..];
+}
+
+// Commits per weekday (0 = Sunday) and hour, in the configured time zone.
+internal sealed record HabitStat(int[][] Grid, int Total, int SkippedRepositories)
+{
+    public int Peak => Grid.SelectMany(static x => x).DefaultIfEmpty(0).Max();
+
+    public int PeakHour => ByHour().ToList().IndexOf(ByHour().DefaultIfEmpty(0).Max());
+
+    public int BusiestDay
+    {
+        get
+        {
+            var totals = Grid.Select(static x => x.Sum()).ToList();
+            return totals.IndexOf(totals.DefaultIfEmpty(0).Max());
+        }
+    }
+
+    public (int First, int Last) ActiveHours
+    {
+        get
+        {
+            var hours = ByHour().ToArray();
+            var first = Array.FindIndex(hours, static x => x > 0);
+            var last = Array.FindLastIndex(hours, static x => x > 0);
+            return first < 0 ? (0, 0) : (first, last);
+        }
+    }
+
+    private IEnumerable<int> ByHour() => Enumerable.Range(0, 24).Select(hour => Grid.Sum(day => day[hour]));
 }
 
 internal sealed record ProfileStat(

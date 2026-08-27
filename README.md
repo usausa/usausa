@@ -1,4 +1,4 @@
-![Contributions](https://usausa.github.io/usausa/contributions.svg)
+![Commit habits](https://usausa.github.io/usausa/habits.svg)
 
 [![Stats](https://usausa.github.io/usausa/overview.svg)](https://github.com/usausa?tab=repositories)
 [![Languages](https://usausa.github.io/usausa/languages.svg)](https://github.com/usausa?tab=repositories)

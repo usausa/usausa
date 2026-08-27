@@ -42,6 +42,39 @@ internal sealed class GitHubClient : IDisposable
         }
         """;
 
+    private const string CommitRepositoryQuery = """
+        query($login: String!) {
+          user(login: $login) {
+            id
+            contributionsCollection {
+              commitContributionsByRepository(maxRepositories: 100) {
+                repository { name owner { login } }
+              }
+            }
+          }
+        }
+        """;
+
+    private const string CommitHistoryQuery = """
+        query($owner: String!, $name: String!, $author: ID!, $since: GitTimestamp!, $cursor: String) {
+          repository(owner: $owner, name: $name) {
+            defaultBranchRef {
+              target {
+                ... on Commit {
+                  history(first: 100, after: $cursor, since: $since, author: { id: $author }) {
+                    pageInfo { hasNextPage endCursor }
+                    nodes { committedDate }
+                  }
+                }
+              }
+            }
+          }
+        }
+        """;
+
+    // A runaway guard: no repository of this profile comes close, and it bounds the daily run.
+    private const int MaxHistoryPages = 30;
+
     private readonly HttpClient client;
 
     public GitHubClient(string token)
@@ -76,6 +109,86 @@ internal sealed class GitHubClient : IDisposable
             calendar,
             languages,
             repositories);
+    }
+
+    // The contribution calendar has no clock, so the commit times come from each repository the profile
+    // committed to over the same window.
+    public async Task<HabitStat> GetHabitsAsync(string login, int offsetHours)
+    {
+        string authorId;
+        var repositories = new List<(string Owner, string Name)>();
+
+        using (var list = await QueryAsync(CommitRepositoryQuery, new Dictionary<string, object?> { ["login"] = login }))
+        {
+            var user = list.RootElement.GetProperty("data").GetProperty("user");
+            authorId = user.GetProperty("id").GetString()!;
+
+            foreach (var entry in user.GetProperty("contributionsCollection").GetProperty("commitContributionsByRepository").EnumerateArray())
+            {
+                var repository = entry.GetProperty("repository");
+                repositories.Add((repository.GetProperty("owner").GetProperty("login").GetString()!, repository.GetProperty("name").GetString()!));
+            }
+        }
+
+        var grid = Enumerable.Range(0, 7).Select(static _ => new int[24]).ToArray();
+        var offset = TimeSpan.FromHours(offsetHours);
+        var since = DateTimeOffset.UtcNow.AddYears(-1).ToString("yyyy-MM-ddTHH:mm:ssZ");
+        var total = 0;
+        var skipped = 0;
+
+        foreach (var (owner, name) in repositories)
+        {
+            string? cursor = null;
+            var pages = 0;
+
+            do
+            {
+                JsonDocument page;
+                try
+                {
+                    page = await QueryAsync(CommitHistoryQuery, new Dictionary<string, object?>
+                    {
+                        ["owner"] = owner,
+                        ["name"] = name,
+                        ["author"] = authorId,
+                        ["since"] = since,
+                        ["cursor"] = cursor
+                    });
+                }
+                catch (InvalidOperationException)
+                {
+                    // Private or otherwise invisible to this token; the shape of the histogram survives it.
+                    skipped++;
+                    break;
+                }
+
+                using (page)
+                {
+                    var repository = page.RootElement.GetProperty("data").GetProperty("repository");
+                    var branch = repository.ValueKind == JsonValueKind.Null ? default : repository.GetProperty("defaultBranchRef");
+                    if (branch.ValueKind is JsonValueKind.Undefined or JsonValueKind.Null)
+                    {
+                        break;
+                    }
+
+                    var history = branch.GetProperty("target").GetProperty("history");
+                    foreach (var node in history.GetProperty("nodes").EnumerateArray())
+                    {
+                        var at = DateTimeOffset.Parse(node.GetProperty("committedDate").GetString()!).ToOffset(offset);
+                        grid[(int)at.DayOfWeek][at.Hour]++;
+                        total++;
+                    }
+
+                    var info = history.GetProperty("pageInfo");
+                    cursor = info.GetProperty("hasNextPage").GetBoolean() ? info.GetProperty("endCursor").GetString() : null;
+                }
+
+                pages++;
+            }
+            while ((cursor is not null) && (pages < MaxHistoryPages));
+        }
+
+        return new HabitStat(grid, total, skipped);
     }
 
     private static CalendarStat ReadCalendar(JsonElement calendar)
