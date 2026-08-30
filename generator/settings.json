@@ -130,6 +130,10 @@
           "label": "BunnyTail.ServiceRegistration"
         },
         {
+          "name": "bunnytail-xaml-property",
+          "label": "BunnyTail.XamlProperty"
+        },
+        {
           "name": "bunnytail-embedded-build-property",
           "label": "BunnyTail.EmbeddedBuildProperty"
         },
