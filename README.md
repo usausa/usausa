@@ -38,6 +38,7 @@
 [![BunnyTail.XamlProperty](https://usausa.github.io/usausa/repo/bunnytail-xaml-property.svg)](https://github.com/usausa/bunnytail-xaml-property)
 [![BunnyTail.EmbeddedBuildProperty](https://usausa.github.io/usausa/repo/bunnytail-embedded-build-property.svg)](https://github.com/usausa/bunnytail-embedded-build-property)
 [![AmazonLambdaExtension](https://usausa.github.io/usausa/repo/amazon-lambda-extension.svg)](https://github.com/usausa/amazon-lambda-extension)
+[![AzureFunctionsExtension](https://usausa.github.io/usausa/repo/azure-functions-extension.svg)](https://github.com/usausa/azure-functions-extension)
 
 # :wrench: Helper
 
@@ -51,7 +52,6 @@
 [![Mofucat.SqliteConfiguration](https://usausa.github.io/usausa/repo/mofucat-sqlite-configuration.svg)](https://github.com/usausa/mofucat-sqlite-configuration)
 [![Mofucat.TcpService](https://usausa.github.io/usausa/repo/mofucat-tcp-service.svg)](https://github.com/usausa/mofucat-tcp-service)
 [![Mofucat.JobScheduler](https://usausa.github.io/usausa/repo/mofucat-job-scheduler.svg)](https://github.com/usausa/mofucat-job-scheduler)
-[![AzureFunctionsExtension](https://usausa.github.io/usausa/repo/azure-functions-extension.svg)](https://github.com/usausa/azure-functions-extension)
 
 # :control_knobs: Device
 
