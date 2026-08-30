@@ -35,6 +35,7 @@
 [![BunnyTail.MemberAccessor](https://usausa.github.io/usausa/repo/bunnytail-member-accessor.svg)](https://github.com/usausa/bunnytail-member-accessor)
 [![BunnyTail.DependencyInjection](https://usausa.github.io/usausa/repo/bunnytail-dependency-injection.svg)](https://github.com/usausa/bunnytail-dependency-injection)
 [![BunnyTail.ServiceRegistration](https://usausa.github.io/usausa/repo/bunnytail-service-registration.svg)](https://github.com/usausa/bunnytail-service-registration)
+[![BunnyTail.XamlProperty](https://usausa.github.io/usausa/repo/bunnytail-xaml-property.svg)](https://github.com/usausa/bunnytail-xaml-property)
 [![BunnyTail.EmbeddedBuildProperty](https://usausa.github.io/usausa/repo/bunnytail-embedded-build-property.svg)](https://github.com/usausa/bunnytail-embedded-build-property)
 [![AmazonLambdaExtension](https://usausa.github.io/usausa/repo/amazon-lambda-extension.svg)](https://github.com/usausa/amazon-lambda-extension)
 
