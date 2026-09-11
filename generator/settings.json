@@ -140,6 +140,10 @@
         {
           "name": "amazon-lambda-extension",
           "label": "AmazonLambdaExtension"
+        },
+        {
+          "name": "azure-functions-extension",
+          "label": "AzureFunctionsExtension"
         }
       ]
     },
@@ -187,8 +191,8 @@
           "label": "Mofucat.JobScheduler"
         },
         {
-          "name": "azure-functions-extension",
-          "label": "AzureFunctionsExtension"
+          "name": "clam-grid-maui",
+          "label": "MAUI grid control"
         }
       ]
     },
@@ -283,6 +287,10 @@
         {
           "name": "service-deploy-agent",
           "label": "Windows Service remote deploy tool"
+        },
+        {
+          "name": "mcp-image-generator",
+          "label": "Image generator MCP server"
         }
       ]
     }
