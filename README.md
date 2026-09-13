@@ -80,6 +80,8 @@
 [![DNS relay service](https://usausa.github.io/usausa/repo/raccoon-dns-relay.svg)](https://github.com/usausa/raccoon-dns-relay)
 [![Auto port foward service](https://usausa.github.io/usausa/repo/raccoon-auto-port-forward.svg)](https://github.com/usausa/raccoon-auto-port-forward)
 [![Storage Explore](https://usausa.github.io/usausa/repo/storage-explore.svg)](https://github.com/usausa/storage-explore)
+[![Cloud Manager](https://usausa.github.io/usausa/repo/cloud-manager.svg)](https://github.com/usausa/cloud-manager)
+[![Cloud Manager OCI](https://usausa.github.io/usausa/repo/cloud-manager-oci.svg)](https://github.com/usausa/cloud-manager-oci)
 [![Windows Service remote deploy tool](https://usausa.github.io/usausa/repo/service-deploy-agent.svg)](https://github.com/usausa/service-deploy-agent)
 [![Image generator MCP server](https://usausa.github.io/usausa/repo/mcp-image-generator.svg)](https://github.com/usausa/mcp-image-generator)
 [![CloudManager](https://usausa.github.io/usausa/repo/cloud-manager.svg)](https://github.com/usausa/cloud-manager)
