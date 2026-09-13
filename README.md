@@ -44,6 +44,7 @@
 
 [![Rester](https://usausa.github.io/usausa/repo/Rester.svg)](https://github.com/usausa/Rester)
 [![OysterReport](https://usausa.github.io/usausa/repo/oyster-report.svg)](https://github.com/usausa/oyster-report)
+[![ClamGrid](https://usausa.github.io/usausa/repo/clam-grid.svg)](https://github.com/usausa/clam-grid)
 [![MiniDataProfiler](https://usausa.github.io/usausa/repo/mini-data-profiler.svg)](https://github.com/usausa/mini-data-profiler)
 [![NpgsqlBulkHelper](https://usausa.github.io/usausa/repo/npgsql-bulk-helper.svg)](https://github.com/usausa/npgsql-bulk-helper)
 [![Mofucat.DataBridge](https://usausa.github.io/usausa/repo/mofucat-data-bridge.svg)](https://github.com/usausa/mofucat-data-bridge)
