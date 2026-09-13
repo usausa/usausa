@@ -84,5 +84,3 @@
 [![Cloud Manager OCI](https://usausa.github.io/usausa/repo/cloud-manager-oci.svg)](https://github.com/usausa/cloud-manager-oci)
 [![Windows Service remote deploy tool](https://usausa.github.io/usausa/repo/service-deploy-agent.svg)](https://github.com/usausa/service-deploy-agent)
 [![Image generator MCP server](https://usausa.github.io/usausa/repo/mcp-image-generator.svg)](https://github.com/usausa/mcp-image-generator)
-[![CloudManager](https://usausa.github.io/usausa/repo/cloud-manager.svg)](https://github.com/usausa/cloud-manager)
-[![CloudManager OCI](https://usausa.github.io/usausa/repo/cloud-manager-oci.svg)](https://github.com/usausa/cloud-manager-oci)
