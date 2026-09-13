@@ -52,7 +52,7 @@
 [![Mofucat.SqliteConfiguration](https://usausa.github.io/usausa/repo/mofucat-sqlite-configuration.svg)](https://github.com/usausa/mofucat-sqlite-configuration)
 [![Mofucat.TcpService](https://usausa.github.io/usausa/repo/mofucat-tcp-service.svg)](https://github.com/usausa/mofucat-tcp-service)
 [![Mofucat.JobScheduler](https://usausa.github.io/usausa/repo/mofucat-job-scheduler.svg)](https://github.com/usausa/mofucat-job-scheduler)
-[![ClaimGrid](https://usausa.github.io/usausa/repo/clam-grid.svg)](https://github.com/usausa/clam-grid)
+[![ClamGrid](https://usausa.github.io/usausa/repo/clam-grid.svg)](https://github.com/usausa/clam-grid)
 
 # :control_knobs: Device
 
@@ -81,3 +81,5 @@
 [![Storage Explore](https://usausa.github.io/usausa/repo/storage-explore.svg)](https://github.com/usausa/storage-explore)
 [![Windows Service remote deploy tool](https://usausa.github.io/usausa/repo/service-deploy-agent.svg)](https://github.com/usausa/service-deploy-agent)
 [![Image generator MCP server](https://usausa.github.io/usausa/repo/mcp-image-generator.svg)](https://github.com/usausa/mcp-image-generator)
+[![CloudManager](https://usausa.github.io/usausa/repo/cloud-manager.svg)](https://github.com/usausa/cloud-manager)
+[![CloudManager OCI](https://usausa.github.io/usausa/repo/cloud-manager-oci.svg)](https://github.com/usausa/cloud-manager-oci)

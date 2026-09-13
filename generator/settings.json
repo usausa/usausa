@@ -21,7 +21,8 @@
       "AzureFunctionsExtension",
       "MacDotNet",
       "LinuxDotNet",
-      "RaspberryDotNet"
+      "RaspberryDotNet",
+      "ClamGrid"
     ]
   },
   "categories": [
@@ -191,8 +192,8 @@
           "label": "Mofucat.JobScheduler"
         },
         {
-          "name": "clam-grid-maui",
-          "label": "MAUI grid control"
+          "name": "clam-grid",
+          "label": "ClamGrid"
         }
       ]
     },
@@ -291,6 +292,14 @@
         {
           "name": "mcp-image-generator",
           "label": "Image generator MCP server"
+        },
+        {
+          "name": "cloud-manager",
+          "label": "CloudManager"
+        },
+        {
+          "name": "cloud-manager-oci",
+          "label": "CloudManager OCI"
         }
       ]
     }
