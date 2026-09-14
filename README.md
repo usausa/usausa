@@ -54,7 +54,6 @@
 [![Mofucat.SqliteConfiguration](https://usausa.github.io/usausa/repo/mofucat-sqlite-configuration.svg)](https://github.com/usausa/mofucat-sqlite-configuration)
 [![Mofucat.TcpService](https://usausa.github.io/usausa/repo/mofucat-tcp-service.svg)](https://github.com/usausa/mofucat-tcp-service)
 [![Mofucat.JobScheduler](https://usausa.github.io/usausa/repo/mofucat-job-scheduler.svg)](https://github.com/usausa/mofucat-job-scheduler)
-[![ClamGrid](https://usausa.github.io/usausa/repo/clam-grid.svg)](https://github.com/usausa/clam-grid)
 
 # :control_knobs: Device
 

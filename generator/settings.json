@@ -90,12 +90,16 @@
           "label": "Smart.Core"
         },
         {
+          "name": "Smart-Net-Converter",
+          "label": "Smart.Converter"
+        },
+        {
           "name": "Smart-Net-ByteMapper",
           "label": "Smart.ByteMapper"
         },
         {
-          "name": "Smart-Net-Converter",
-          "label": "Smart.Converter"
+          "name": "Smart-Net-Results",
+          "label": "Smart.Results"
         },
         {
           "name": "Smart-Net-Mapper",
@@ -160,6 +164,10 @@
           "label": "OysterReport"
         },
         {
+          "name": "clam-grid",
+          "label": "ClamGrid"
+        },
+        {
           "name": "mini-data-profiler",
           "label": "MiniDataProfiler"
         },
@@ -190,10 +198,6 @@
         {
           "name": "mofucat-job-scheduler",
           "label": "Mofucat.JobScheduler"
-        },
-        {
-          "name": "clam-grid",
-          "label": "ClamGrid"
         }
       ]
     },
@@ -286,20 +290,20 @@
           "label": "Storage Explore"
         },
         {
+          "name": "cloud-manager",
+          "label": "Cloud Manager"
+        },
+        {
+          "name": "cloud-manager-oci",
+          "label": "Cloud Manager OCI"
+        },
+        {
           "name": "service-deploy-agent",
           "label": "Windows Service remote deploy tool"
         },
         {
           "name": "mcp-image-generator",
           "label": "Image generator MCP server"
-        },
-        {
-          "name": "cloud-manager",
-          "label": "CloudManager"
-        },
-        {
-          "name": "cloud-manager-oci",
-          "label": "CloudManager OCI"
         }
       ]
     }
