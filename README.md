@@ -25,7 +25,7 @@
 [![Smart.Core](https://usausa.github.io/usausa/repo/Smart-Net.svg)](https://github.com/usausa/Smart-Net)
 [![Smart.Converter](https://usausa.github.io/usausa/repo/Smart-Net-Converter.svg)](https://github.com/usausa/Smart-Net-Converter)
 [![Smart.ByteMapper](https://usausa.github.io/usausa/repo/Smart-Net-ByteMapper.svg)](https://github.com/usausa/Smart-Net-ByteMapper)
-[![Smart.Result](https://usausa.github.io/usausa/repo/Smart-Net-Result.svg)](https://github.com/usausa/Smart-Net-Result)
+[![Smart.Results](https://usausa.github.io/usausa/repo/Smart-Net-Results.svg)](https://github.com/usausa/Smart-Net-Results)
 [![Smart.Mapper](https://usausa.github.io/usausa/repo/Smart-Net-Mapper.svg)](https://github.com/usausa/Smart-Net-Mapper)
 [![Smart.Reactive](https://usausa.github.io/usausa/repo/Smart-Net-Reactive.svg)](https://github.com/usausa/Smart-Net-Reactive)
 
