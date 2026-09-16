@@ -100,23 +100,18 @@ internal sealed class History
         Totals.Sort(static (x, y) => x.Date.CompareTo(y.Date));
     }
 
-    // A repository has no usable past when it is missing, or when its only point is the one the first
-    // snapshot wrote because seeding failed that day. A repository whose first star arrived later than the
-    // first snapshot needs nothing: the snapshots already hold its whole history.
-    public bool NeedsSeed(string name) =>
+    // A repository has no usable past when it is missing, or when its only point is the one today's first
+    // snapshot wrote because seeding failed earlier the same day. Later on the snapshots hold the whole
+    // history of any repository, so nothing is asked for again.
+    public bool NeedsSeed(string name, DateOnly today) =>
         !Repositories.TryGetValue(name, out var series) ||
         (series.Count == 0) ||
-        ((series.Count == 1) && (series[0].Date == FirstSnapshot));
+        ((series.Count == 1) && (series[0].Date == today) && (FirstSnapshot == today));
 
     // A repository seen for the first time gets its star curve rebuilt from when each current stargazer
     // starred it, so the star cards have a past on the very first run.
     public void SeedRepository(string name, IEnumerable<DateOnly> starDates)
     {
-        if (!NeedsSeed(name))
-        {
-            return;
-        }
-
         var series = SeriesOf(Repositories, name);
         series.Clear();
         var count = 0L;

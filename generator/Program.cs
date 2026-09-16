@@ -40,7 +40,7 @@ Console.WriteLine($"Updating history ({history.Totals.Count} snapshots{(history.
 var seeded = 0;
 foreach (var repository in profile.Repositories.Values)
 {
-    if ((repository.Stars > 0) && history.NeedsSeed(repository.Name))
+    if ((repository.Stars > 0) && history.NeedsSeed(repository.Name, today))
     {
         try
         {
