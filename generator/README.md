@@ -11,7 +11,8 @@ No external NuGet packages are used, so the workflow only needs the .NET SDK.
 | Path | What it holds |
 | --- | --- |
 | `settings.json` | The user to report on, the NuGet id prefixes to search, and the repositories that get a card |
-| `GitHubClient.cs` | Profile, contribution calendar, repository list, language sizes and commit times |
+| `GitHubClient.cs` | Profile, contribution calendar, repository list, language sizes, commit times and star dates |
+| `History.cs` | The daily snapshots behind the trend cards, read from and written to `history.json` |
 | `NuGetClient.cs` | Package downloads |
 | `EmojiResolver.cs` | Expands `:shortcode:` in category titles for the index page |
 | `Cards/Theme.cs` | The light and dark palettes emitted into every card |
@@ -26,19 +27,49 @@ is what a viewer that ignores the query will show.
 
 | File | Size | In the README |
 | --- | --- | --- |
-| `habits.svg` | 804x178 | yes |
+| `habits.svg` | 804x178 | no, generated but not linked |
 | `overview.svg` | 400x152 | yes |
 | `languages.svg` | 400x152 | yes |
 | `activity.svg` | 400x174 | yes |
 | `nuget.svg` | 400x174 | yes |
+| `nuget-trend.svg` | 400x174 | yes |
+| `stars.svg` | 400x174 | yes |
 | `contributions.svg` | 804x150 | no, GitHub already draws the calendar on the profile |
-| `repo/<repository>.svg` | 400x88 | yes |
+| `repo/<repository>.svg` | 400x72 | yes |
+| `history.json` | - | no, the daily snapshots the trend cards are drawn from |
 
 The wide cards are exactly two 400px cards plus the space the markdown renderer puts between them, so
 every row in the README lines up. Changing `RepositoryCard.Width` moves the wide cards with it.
 
-`contributions.svg` is still generated and reachable on the site, so putting it back is a one-line
-change in `README.md`.
+`contributions.svg` and `habits.svg` are still generated and reachable on the site, so putting either
+back is a one-line change in `README.md`.
+
+The repository card shows only the headline of the GitHub description, the part before the first
+` - ` (an em or en dash also works), on a single line. Keep that part short enough for the card;
+the details after the dash are for GitHub itself.
+
+## History and the trend cards
+
+`nuget-trend.svg`, `stars.svg` and the `+N` next to the star count on a repository card are drawn from
+`history.json`, a file the run reads at the start and writes back into the output directory, so it
+rides along on the `gh-pages` branch. The workflow copies the previous one out of that branch before
+generating; locally, pass `--history path` to keep one between runs.
+
+The file holds one snapshot per day: total downloads and package count from NuGet, and stars per
+repository. A series only records a value when it changes, so it stays small. Package points older
+than `History.DetailDays` are folded into a single carry-over point; star points are kept.
+
+Two things follow from the data source:
+
+- NuGet has no download history API, so the downloads-per-day curve begins the day after the first
+  snapshot and shows `Collecting daily data since ...` until then. A day the workflow did not run
+  appears as zero, and its downloads land on the next day that did run.
+- The first time a repository is seen, its star curve is rebuilt from when each current stargazer
+  starred it, which is why the star card has a full year on day one. Stars removed since are not in
+  that reconstruction, so the seeded curve can sit a little below what daily snapshots would show.
+
+Deleting `history.json` from `gh-pages` (or running without `--history`) starts the NuGet history over
+and re-seeds the star history.
 
 ## Settings
 
@@ -151,6 +182,7 @@ GITHUB_TOKEN=$(gh auth token) dotnet run --project generator -- --output dist
 | --- | --- |
 | `--output` | `dist` |
 | `--settings` | `settings.json` next to the executable |
+| `--history` | none; without it the trend cards start from an empty history |
 
 Open `dist/index.html` to see every card the run produced.
 

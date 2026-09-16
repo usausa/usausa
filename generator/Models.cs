@@ -31,7 +31,7 @@ internal sealed record RepositoryStat(
 
 internal sealed record PackageStat(string Id, long Downloads);
 
-internal sealed record NuGetStat(int PackageCount, long TotalDownloads, PackageStat[] Top);
+internal sealed record NuGetStat(int PackageCount, long TotalDownloads, PackageStat[] Top, IReadOnlyDictionary<string, long> All);
 
 internal sealed record CalendarStat(DateOnly FirstDay, int[] Days)
 {

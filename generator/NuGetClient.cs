@@ -60,7 +60,7 @@ internal sealed class NuGetClient : IDisposable
             .Take(topCount)
             .ToArray();
 
-        return new NuGetStat(packages.Count, packages.Values.Sum(), top);
+        return new NuGetStat(packages.Count, packages.Values.Sum(), top, packages);
     }
 
     private async Task<string> GetSearchUrlAsync()

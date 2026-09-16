@@ -5,6 +5,7 @@ using StatsGenerator.Cards;
 
 var output = ArgumentOf(args, "--output") ?? "dist";
 var settingsPath = ArgumentOf(args, "--settings") ?? Path.Combine(AppContext.BaseDirectory, "settings.json");
+var historyPath = ArgumentOf(args, "--history");
 
 var token = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
 if (String.IsNullOrEmpty(token))
@@ -33,6 +34,23 @@ using var nuget = new NuGetClient();
 var packages = await nuget.GetStatAsync(settings.NuGet, 4);
 Console.WriteLine($"  {packages.PackageCount} packages · {packages.TotalDownloads:N0} downloads");
 
+var today = DateOnly.FromDateTime(DateTimeOffset.UtcNow.ToOffset(TimeSpan.FromHours(settings.TimeZoneOffsetHours)).DateTime);
+var history = History.Load(historyPath);
+Console.WriteLine($"Updating history ({history.Totals.Count} snapshots{(history.FirstSnapshot is null ? String.Empty : $" since {history.FirstSnapshot:yyyy-MM-dd}")})...");
+var seeded = 0;
+foreach (var repository in profile.Repositories.Values)
+{
+    if ((repository.Stars > 0) && !history.Repositories.ContainsKey(repository.Name))
+    {
+        history.SeedRepository(repository.Name, await github.GetStarDatesAsync(settings.User, repository.Name, settings.TimeZoneOffsetHours));
+        seeded++;
+    }
+}
+
+history.Record(today, packages, profile.Repositories.Values);
+history.Prune(today.AddDays(-History.DetailDays));
+Console.WriteLine($"  {today:yyyy-MM-dd} recorded · {seeded} star histories seeded");
+
 var repositoryDirectory = Path.Combine(output, "repo");
 Directory.CreateDirectory(repositoryDirectory);
 
@@ -43,7 +61,9 @@ var summary = new Dictionary<string, string>
     ["habits.svg"] = HabitsCard.Render(habits, settings.TimeZoneOffsetHours),
     ["contributions.svg"] = ContributionsCard.Render(profile),
     ["activity.svg"] = ActivityCard.Render(profile),
-    ["nuget.svg"] = NuGetCard.Render(packages)
+    ["nuget.svg"] = NuGetCard.Render(packages),
+    ["nuget-trend.svg"] = NuGetTrendCard.Render(history, today),
+    ["stars.svg"] = StarsCard.Render(history, today)
 };
 
 foreach (var (name, content) in summary)
@@ -60,13 +80,14 @@ foreach (var entry in settings.AllRepositories)
         continue;
     }
 
-    File.WriteAllText(Path.Combine(repositoryDirectory, $"{entry.Name}.svg"), RepositoryCard.Render(repository));
+    File.WriteAllText(Path.Combine(repositoryDirectory, $"{entry.Name}.svg"), RepositoryCard.Render(repository, history.StarGain(entry.Name, today, 30)));
     written++;
 }
 
 var emoji = await EmojiResolver.LoadAsync(token);
 File.WriteAllText(Path.Combine(output, "index.html"), IndexPage.Render(settings, emoji, [.. summary.Keys], DateTimeOffset.UtcNow));
 File.WriteAllText(Path.Combine(output, ".nojekyll"), String.Empty);
+history.Save(Path.Combine(output, "history.json"));
 
 Console.WriteLine($"Wrote {summary.Count} summary cards and {written} repository cards to {Path.GetFullPath(output)}");
 return 0;

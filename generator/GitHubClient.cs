@@ -72,6 +72,17 @@ internal sealed class GitHubClient : IDisposable
         }
         """;
 
+    private const string StargazerQuery = """
+        query($owner: String!, $name: String!, $cursor: String) {
+          repository(owner: $owner, name: $name) {
+            stargazers(first: 100, after: $cursor, orderBy: { field: STARRED_AT, direction: ASC }) {
+              pageInfo { hasNextPage endCursor }
+              edges { starredAt }
+            }
+          }
+        }
+        """;
+
     // A runaway guard: no repository of this profile comes close, and it bounds the daily run.
     private const int MaxHistoryPages = 30;
 
@@ -195,6 +206,39 @@ internal sealed class GitHubClient : IDisposable
         }
 
         return new HabitStat(grid, total, skipped);
+    }
+
+    // When each current stargazer starred the repository, as dates in the configured zone. Stars that
+    // were removed since are invisible here, so a curve rebuilt from this can sit slightly below what
+    // daily snapshots would have recorded.
+    public async Task<List<DateOnly>> GetStarDatesAsync(string owner, string name, int offsetHours)
+    {
+        var offset = TimeSpan.FromHours(offsetHours);
+        var dates = new List<DateOnly>();
+        string? cursor = null;
+
+        do
+        {
+            using var page = await QueryAsync(StargazerQuery, new Dictionary<string, object?>
+            {
+                ["owner"] = owner,
+                ["name"] = name,
+                ["cursor"] = cursor
+            });
+
+            var stargazers = page.RootElement.GetProperty("data").GetProperty("repository").GetProperty("stargazers");
+            foreach (var edge in stargazers.GetProperty("edges").EnumerateArray())
+            {
+                var at = DateTimeOffset.Parse(edge.GetProperty("starredAt").GetString()!).ToOffset(offset);
+                dates.Add(DateOnly.FromDateTime(at.DateTime));
+            }
+
+            var info = stargazers.GetProperty("pageInfo");
+            cursor = info.GetProperty("hasNextPage").GetBoolean() ? info.GetProperty("endCursor").GetString() : null;
+        }
+        while (cursor is not null);
+
+        return dates;
     }
 
     // Linguist reassigns colors from time to time, so a language can be pinned in settings.

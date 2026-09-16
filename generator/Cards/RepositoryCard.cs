@@ -4,29 +4,28 @@ internal static class RepositoryCard
 {
     public const int Width = 400;
 
-    private const int Height = 88;
+    private const int Height = 72;
     private const int PadX = 20;
     private const int TitleX = 44;
     private const int TitleY = 24;
     private const int DescriptionY = 44;
-    private const int DescriptionPitch = 15;
-    private const int FooterY = 75;
+    private const int FooterY = 60;
     private const int MetricGap = 14;
 
-    public static string Render(RepositoryStat repository)
+    private static readonly string[] Separators = [" - ", " \u2014 ", " \u2013 "];
+
+    // starGain is the change over the last 30 days; it is shown next to the star count when positive.
+    public static string Render(RepositoryStat repository, long starGain = 0)
     {
         var svg = new SvgBuilder(Width, Height, $"{repository.Name} repository stats");
 
         svg.Icon(Octicons.Repo, PadX, 12);
         svg.Text(TitleX, TitleY, 14, "tt", TextMeasure.Wrap(repository.Name, 14, Width - TitleX - PadX, 1)[0], weight: 500);
 
-        if (!String.IsNullOrWhiteSpace(repository.Description))
+        var headline = Headline(repository.Description);
+        if (headline.Length > 0)
         {
-            var lines = TextMeasure.Wrap(repository.Description, 12, Width - (PadX * 2), 2);
-            for (var i = 0; i < lines.Length; i++)
-            {
-                svg.Text(PadX, DescriptionY + (i * DescriptionPitch), 12, "tm", lines[i]);
-            }
+            svg.Text(PadX, DescriptionY, 12, "tm", TextMeasure.Wrap(headline, 12, Width - (PadX * 2), 1)[0]);
         }
 
         var x = (double)PadX;
@@ -38,9 +37,36 @@ internal static class RepositoryCard
         }
 
         x = Metric(svg, x, Octicons.Star, repository.Stars);
+        if (starGain > 0)
+        {
+            var gain = $"+{SvgBuilder.Number(starGain)}";
+            svg.Text(x - MetricGap + 4, FooterY, 11, "act n", gain);
+            x += TextMeasure.Width(gain, 11) + 4;
+        }
+
         Metric(svg, x, Octicons.Fork, repository.Forks);
 
         return svg.Build();
+    }
+
+    // Descriptions follow the "headline - details" convention; the card only has room for the headline.
+    private static string Headline(string? description)
+    {
+        if (String.IsNullOrWhiteSpace(description))
+        {
+            return String.Empty;
+        }
+
+        foreach (var separator in Separators)
+        {
+            var index = description.IndexOf(separator, StringComparison.Ordinal);
+            if (index > 0)
+            {
+                return description[..index].Trim();
+            }
+        }
+
+        return description.Trim();
     }
 
     private static double Metric(SvgBuilder svg, double x, string icon, int value)
