@@ -10,7 +10,7 @@ No external NuGet packages are used, so the workflow only needs the .NET SDK.
 
 | Path | What it holds |
 | --- | --- |
-| `settings.json` | The user to report on, the NuGet id prefixes to search, and the repositories that get a card |
+| `settings.json` | The user to report on, the NuGet account whose packages are counted, and the repositories that get a card |
 | `GitHubClient.cs` | Profile, contribution calendar, repository list, language sizes, commit times and star dates |
 | `History.cs` | The daily snapshots behind the trend cards, read from and written to `history.json` |
 | `NuGetClient.cs` | Package downloads |
@@ -77,6 +77,7 @@ Besides the repository list, `settings.json` carries:
 
 | Key | Meaning |
 | --- | --- |
+| `nuget.owner` | The nuget.org account; the card counts every package it owns, the same set as the profile page |
 | `accent` | The hue shared by the heatmap, the activity line, and the download bars |
 | `timeZoneOffsetHours` | The zone the commit hours are reported in; `9` for JST |
 | `languageColors` | Language colors to use instead of the ones the API reports |

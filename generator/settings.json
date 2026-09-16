@@ -6,24 +6,7 @@
     "C#": "#178600"
   },
   "nuget": {
-    "owner": "machi_pon",
-    "prefixes": [
-      "Usa.",
-      "BunnyTail.",
-      "Mofucat.",
-      "Rester",
-      "TuringSmartScreenLib",
-      "HardwareInfo",
-      "DeviceLib",
-      "MiniDataProfiler",
-      "NpgsqlBulkHelper",
-      "AmazonLambdaExtension",
-      "AzureFunctionsExtension",
-      "MacDotNet",
-      "LinuxDotNet",
-      "RaspberryDotNet",
-      "ClamGrid"
-    ]
+    "owner": "machi_pon"
   },
   "categories": [
     {

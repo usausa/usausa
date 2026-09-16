@@ -19,38 +19,37 @@ internal sealed class NuGetClient : IDisposable
 
     public void Dispose() => client.Dispose();
 
-    // The search API cannot filter by owner, so query each package id prefix and keep the hits this owner published.
+    // The search service understands the same owner: syntax as the nuget.org search box, so one query
+    // returns exactly the packages the profile page counts. The owner check on each hit is a guard
+    // against the syntax being treated as free text.
     public async Task<NuGetStat> GetStatAsync(NuGetSettings settings, int topCount)
     {
         var search = await GetSearchUrlAsync();
         var packages = new Dictionary<string, long>(StringComparer.OrdinalIgnoreCase);
 
-        foreach (var prefix in settings.Prefixes)
+        var skip = 0;
+        while (true)
         {
-            var skip = 0;
-            while (true)
+            var url = $"{search}?q={Uri.EscapeDataString($"owner:{settings.Owner}")}&take={PageSize}&skip={skip}&prerelease=true&semVerLevel=2.0.0";
+            using var document = await GetJsonAsync(url);
+
+            var data = document.RootElement.GetProperty("data");
+            var count = data.GetArrayLength();
+            foreach (var package in data.EnumerateArray())
             {
-                var url = $"{search}?q={Uri.EscapeDataString(prefix)}&take={PageSize}&skip={skip}&prerelease=true&semVerLevel=2.0.0";
-                using var document = await GetJsonAsync(url);
-
-                var data = document.RootElement.GetProperty("data");
-                var count = data.GetArrayLength();
-                foreach (var package in data.EnumerateArray())
+                if (!package.TryGetProperty("owners", out var owners) ||
+                    !owners.EnumerateArray().Any(x => String.Equals(x.GetString(), settings.Owner, StringComparison.OrdinalIgnoreCase)))
                 {
-                    if (!package.TryGetProperty("owners", out var owners) ||
-                        !owners.EnumerateArray().Any(x => String.Equals(x.GetString(), settings.Owner, StringComparison.OrdinalIgnoreCase)))
-                    {
-                        continue;
-                    }
-
-                    packages[package.GetProperty("id").GetString()!] = package.GetProperty("totalDownloads").GetInt64();
+                    continue;
                 }
 
-                skip += count;
-                if ((count < PageSize) || (skip >= document.RootElement.GetProperty("totalHits").GetInt32()))
-                {
-                    break;
-                }
+                packages[package.GetProperty("id").GetString()!] = package.GetProperty("totalDownloads").GetInt64();
+            }
+
+            skip += count;
+            if ((count == 0) || (count < PageSize) || (skip >= document.RootElement.GetProperty("totalHits").GetInt32()))
+            {
+                break;
             }
         }
 

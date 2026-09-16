@@ -13,7 +13,7 @@ internal sealed record Settings(
     public IEnumerable<RepositorySettings> AllRepositories => Categories.SelectMany(static x => x.Repositories);
 }
 
-internal sealed record NuGetSettings(string Owner, string[] Prefixes);
+internal sealed record NuGetSettings(string Owner);
 
 internal sealed record CategorySettings(string Title, RepositorySettings[] Repositories);
 
