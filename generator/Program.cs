@@ -42,8 +42,16 @@ foreach (var repository in profile.Repositories.Values)
 {
     if ((repository.Stars > 0) && !history.Repositories.ContainsKey(repository.Name))
     {
-        history.SeedRepository(repository.Name, await github.GetStarDatesAsync(settings.User, repository.Name, settings.TimeZoneOffsetHours));
-        seeded++;
+        try
+        {
+            history.SeedRepository(repository.Name, await github.GetStarDatesAsync(settings.User, repository.Name, settings.TimeZoneOffsetHours));
+            seeded++;
+        }
+        catch (InvalidOperationException e)
+        {
+            // The curve then starts from today's snapshot instead of the stargazer dates.
+            Console.Error.WriteLine($"  warning: star history of {repository.Name} not seeded: {e.Message}");
+        }
     }
 }
 

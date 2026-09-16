@@ -325,8 +325,9 @@ internal sealed class GitHubClient : IDisposable
         var document = await JsonDocument.ParseAsync(await response.Content.ReadAsStreamAsync());
         if (document.RootElement.TryGetProperty("errors", out var errors))
         {
+            var message = errors.ToString();
             document.Dispose();
-            throw new InvalidOperationException($"GraphQL error: {errors}");
+            throw new InvalidOperationException($"GraphQL error: {message}");
         }
 
         return document;
