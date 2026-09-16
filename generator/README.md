@@ -84,7 +84,8 @@ Besides the repository list, `settings.json` carries:
 
 Language swatches on the languages card and the repository cards come from Linguist through the API.
 Linguist reassigns colors from time to time - C# moved from `#178600` to the .NET purple `#7355dd` -
-so `languageColors` pins the ones that should not follow:
+and the cards follow it. `languageColors` pins a color that should not follow; it is empty at the moment,
+and keeping the old C# green would look like this:
 
 ```json
 "languageColors": {

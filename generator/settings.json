@@ -2,9 +2,7 @@
   "user": "usausa",
   "accent": "blue",
   "timeZoneOffsetHours": 9,
-  "languageColors": {
-    "C#": "#178600"
-  },
+  "languageColors": {},
   "nuget": {
     "owner": "machi_pon"
   },

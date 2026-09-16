@@ -72,7 +72,8 @@ internal static class RepositoryCard
     private static double Metric(SvgBuilder svg, double x, string icon, int value)
     {
         var text = SvgBuilder.Number(value);
-        svg.Icon(icon, x, FooterY - 12, scale: 0.75);
+        // 12px tall once scaled; two pixels below the baseline puts its centre on the digits' centre.
+        svg.Icon(icon, x, FooterY - 10, scale: 0.75);
         svg.Text(x + 17, FooterY, 12, "tp n", text);
         return x + 17 + TextMeasure.Width(text, 12) + MetricGap;
     }
