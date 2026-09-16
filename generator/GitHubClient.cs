@@ -217,8 +217,10 @@ internal sealed class GitHubClient : IDisposable
         var dates = new List<DateOnly>();
         string? cursor = null;
 
-        do
+        try
         {
+            do
+            {
             using var page = await QueryAsync(StargazerQuery, new Dictionary<string, object?>
             {
                 ["owner"] = owner,
@@ -226,19 +228,56 @@ internal sealed class GitHubClient : IDisposable
                 ["cursor"] = cursor
             });
 
-            var stargazers = page.RootElement.GetProperty("data").GetProperty("repository").GetProperty("stargazers");
-            foreach (var edge in stargazers.GetProperty("edges").EnumerateArray())
+                var stargazers = page.RootElement.GetProperty("data").GetProperty("repository").GetProperty("stargazers");
+                foreach (var edge in stargazers.GetProperty("edges").EnumerateArray())
+                {
+                    var at = DateTimeOffset.Parse(edge.GetProperty("starredAt").GetString()!).ToOffset(offset);
+                    dates.Add(DateOnly.FromDateTime(at.DateTime));
+                }
+
+                var info = stargazers.GetProperty("pageInfo");
+                cursor = info.GetProperty("hasNextPage").GetBoolean() ? info.GetProperty("endCursor").GetString() : null;
+            }
+            while (cursor is not null);
+
+            return dates;
+        }
+        catch (InvalidOperationException)
+        {
+            // The workflow token is an app installation, which GraphQL keeps away from stargazer lists.
+            // The REST endpoint answers the same question with the star media type.
+            return await GetStarDatesRestAsync(owner, name, offset);
+        }
+    }
+
+    private async Task<List<DateOnly>> GetStarDatesRestAsync(string owner, string name, TimeSpan offset)
+    {
+        var dates = new List<DateOnly>();
+        for (var pageNumber = 1; ; pageNumber++)
+        {
+            using var request = new HttpRequestMessage(HttpMethod.Get, $"https://api.github.com/repos/{owner}/{name}/stargazers?per_page=100&page={pageNumber}");
+            request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github.star+json"));
+
+            using var response = await client.SendAsync(request);
+            if (!response.IsSuccessStatusCode)
             {
-                var at = DateTimeOffset.Parse(edge.GetProperty("starredAt").GetString()!).ToOffset(offset);
-                dates.Add(DateOnly.FromDateTime(at.DateTime));
+                throw new InvalidOperationException($"REST stargazers {(int)response.StatusCode}: {await response.Content.ReadAsStringAsync()}");
             }
 
-            var info = stargazers.GetProperty("pageInfo");
-            cursor = info.GetProperty("hasNextPage").GetBoolean() ? info.GetProperty("endCursor").GetString() : null;
-        }
-        while (cursor is not null);
+            using var page = await JsonDocument.ParseAsync(await response.Content.ReadAsStreamAsync());
+            var count = 0;
+            foreach (var entry in page.RootElement.EnumerateArray())
+            {
+                var at = DateTimeOffset.Parse(entry.GetProperty("starred_at").GetString()!).ToOffset(offset);
+                dates.Add(DateOnly.FromDateTime(at.DateTime));
+                count++;
+            }
 
-        return dates;
+            if (count < 100)
+            {
+                return dates;
+            }
+        }
     }
 
     // Linguist reassigns colors from time to time, so a language can be pinned in settings.
