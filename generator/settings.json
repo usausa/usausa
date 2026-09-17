@@ -291,6 +291,107 @@
           "label": "Image generator MCP server"
         }
       ]
+    },
+    {
+      "title": ":triangular_ruler: Template",
+      "repositories": [
+        {
+          "name": "template-maui",
+          "label": "MAUI template"
+        },
+        {
+          "name": "template-maui-blazor",
+          "label": "MAUI Blazor Hybrid template"
+        },
+        {
+          "name": "template-maui-keyboard",
+          "label": "MAUI keyboard template"
+        },
+        {
+          "name": "template-maui-server",
+          "label": "MAUI server template"
+        },
+        {
+          "name": "template-blazor-server",
+          "label": "Blazor Server template"
+        },
+        {
+          "name": "template-blazor-server-identity",
+          "label": "Blazor Server Identity template"
+        },
+        {
+          "name": "template-blazor-wasm",
+          "label": "Blazor WebAssembly template"
+        },
+        {
+          "name": "template-blazor-wasm-oidc",
+          "label": "Blazor WebAssembly OIDC template"
+        },
+        {
+          "name": "template-web-api",
+          "label": "Web API template"
+        },
+        {
+          "name": "template-web-fullstack",
+          "label": "Full-stack template"
+        },
+        {
+          "name": "template-web-mvc",
+          "label": "MVC template"
+        },
+        {
+          "name": "template-grpc-server",
+          "label": "gRPC server template"
+        },
+        {
+          "name": "template-worker",
+          "label": "Worker Service template"
+        },
+        {
+          "name": "template-command-server",
+          "label": "TCP command server template"
+        },
+        {
+          "name": "template-command-tool",
+          "label": "CLI tool template"
+        },
+        {
+          "name": "template-wpf",
+          "label": "WPF template"
+        },
+        {
+          "name": "template-avalonia-desktop",
+          "label": "Avalonia desktop template"
+        },
+        {
+          "name": "template-avalonia-embedded",
+          "label": "Avalonia embedded template"
+        },
+        {
+          "name": "template-azure-functions",
+          "label": "Azure Functions template"
+        },
+        {
+          "name": "template-aws-lambda",
+          "label": "AWS Lambda template"
+        },
+        {
+          "name": "template-aws-api-tenant",
+          "label": "AWS multi-tenant API template"
+        },
+        {
+          "name": "template-aws-s3-wasm",
+          "label": "AWS S3 Blazor WebAssembly template"
+        },
+        {
+          "name": "template-aws-line-miniapp",
+          "label": "LINE Mini App template"
+        },
+        {
+          "name": "template-library-with-generator",
+          "label": "Library with generator template"
+        }
+      ]
     }
   ]
 }
