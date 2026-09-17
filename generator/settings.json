@@ -234,6 +234,10 @@
           "label": "PATLITE Tool"
         },
         {
+          "name": "M5Lite",
+          "label": "M5Lite"
+        },
+        {
           "name": "divoom-tool",
           "label": "Divoom Tool"
         },

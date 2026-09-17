@@ -70,6 +70,7 @@
 [![MCP2221 unmaged wrapper](https://usausa.github.io/usausa/repo/mcp2221-managed-wrapper.svg)](https://github.com/usausa/mcp2221-managed-wrapper)
 [![Bluetooth Tool](https://usausa.github.io/usausa/repo/bt-tool.svg)](https://github.com/usausa/bt-tool)
 [![PATLITE Tool](https://usausa.github.io/usausa/repo/patlite-tool.svg)](https://github.com/usausa/patlite-tool)
+[![M5Lite](https://usausa.github.io/usausa/repo/M5Lite.svg)](https://github.com/usausa/M5Lite)
 [![Divoom Tool](https://usausa.github.io/usausa/repo/divoom-tool.svg)](https://github.com/usausa/divoom-tool)
 [![MESH Tool](https://usausa.github.io/usausa/repo/mesh-tool.svg)](https://github.com/usausa/mesh-tool)
 [![Munin node alternative .NET](https://usausa.github.io/usausa/repo/munin-node-alternative.svg)](https://github.com/usausa/munin-node-alternative)
