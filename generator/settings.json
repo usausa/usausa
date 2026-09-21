@@ -183,6 +183,10 @@
         {
           "name": "mofucat-job-scheduler",
           "label": "Mofucat.JobScheduler"
+        },
+        {
+          "name": "mofucat-reactive-hub",
+          "label": "Mofucat.ReactiveHub"
         }
       ]
     },
