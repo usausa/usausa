@@ -149,6 +149,10 @@
           "label": "ClamGrid"
         },
         {
+          "name": "clam-calendar",
+          "label": "ClamCalendar"
+        },
+        {
           "name": "mini-data-profiler",
           "label": "MiniDataProfiler"
         },
