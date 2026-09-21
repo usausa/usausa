@@ -226,20 +226,20 @@
           "label": "OMRON 2JCIE-BU library"
         },
         {
-          "name": "mcp2221-managed-wrapper",
-          "label": "MCP2221 unmaged wrapper"
-        },
-        {
-          "name": "bt-tool",
-          "label": "Bluetooth Tool"
-        },
-        {
           "name": "patlite-tool",
           "label": "PATLITE Tool"
         },
         {
           "name": "M5Lite",
           "label": "M5Lite"
+        },
+        {
+          "name": "mcp2221-managed-wrapper",
+          "label": "MCP2221 unmaged wrapper"
+        },
+        {
+          "name": "bt-tool",
+          "label": "Bluetooth Tool"
         },
         {
           "name": "divoom-tool",
@@ -304,6 +304,10 @@
           "label": "MAUI template"
         },
         {
+          "name": "template-maui-server",
+          "label": "MAUI server template"
+        },
+        {
           "name": "template-maui-blazor",
           "label": "MAUI Blazor Hybrid template"
         },
@@ -312,28 +316,36 @@
           "label": "MAUI keyboard template"
         },
         {
-          "name": "template-maui-server",
-          "label": "MAUI server template"
-        },
-        {
           "name": "template-blazor-server",
           "label": "Blazor Server template"
-        },
-        {
-          "name": "template-blazor-server-identity",
-          "label": "Blazor Server Identity template"
         },
         {
           "name": "template-blazor-wasm",
           "label": "Blazor WebAssembly template"
         },
         {
-          "name": "template-blazor-wasm-oidc",
-          "label": "Blazor WebAssembly OIDC template"
-        },
-        {
           "name": "template-web-api",
           "label": "Web API template"
+        },
+        {
+          "name": "template-wpf",
+          "label": "WPF template"
+        },
+        {
+          "name": "template-command-server",
+          "label": "TCP command server template"
+        },
+        {
+          "name": "template-command-tool",
+          "label": "CLI tool template"
+        },
+        {
+          "name": "template-blazor-server-identity",
+          "label": "Blazor Server Identity template"
+        },
+        {
+          "name": "template-blazor-wasm-oidc",
+          "label": "Blazor WebAssembly OIDC template"
         },
         {
           "name": "template-web-fullstack",
@@ -350,18 +362,6 @@
         {
           "name": "template-worker",
           "label": "Worker Service template"
-        },
-        {
-          "name": "template-command-server",
-          "label": "TCP command server template"
-        },
-        {
-          "name": "template-command-tool",
-          "label": "CLI tool template"
-        },
-        {
-          "name": "template-wpf",
-          "label": "WPF template"
         },
         {
           "name": "template-avalonia-desktop",
