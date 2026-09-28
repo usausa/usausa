@@ -99,6 +99,7 @@
 [![Blazor WebAssembly template](https://usausa.github.io/usausa/repo/template-blazor-wasm.svg)](https://github.com/usausa/template-blazor-wasm)
 [![Web API template](https://usausa.github.io/usausa/repo/template-web-api.svg)](https://github.com/usausa/template-web-api)
 [![WPF template](https://usausa.github.io/usausa/repo/template-wpf.svg)](https://github.com/usausa/template-wpf)
+[![Avalonia embedded template](https://usausa.github.io/usausa/repo/template-avalonia-embedded.svg)](https://github.com/usausa/template-avalonia-embedded)
 [![TCP command server template](https://usausa.github.io/usausa/repo/template-command-server.svg)](https://github.com/usausa/template-command-server)
 [![CLI tool template](https://usausa.github.io/usausa/repo/template-command-tool.svg)](https://github.com/usausa/template-command-tool)
 <!--
@@ -109,7 +110,6 @@
 [![gRPC server template](https://usausa.github.io/usausa/repo/template-grpc-server.svg)](https://github.com/usausa/template-grpc-server)
 [![Worker Service template](https://usausa.github.io/usausa/repo/template-worker.svg)](https://github.com/usausa/template-worker)
 [![Avalonia desktop template](https://usausa.github.io/usausa/repo/template-avalonia-desktop.svg)](https://github.com/usausa/template-avalonia-desktop)
-[![Avalonia embedded template](https://usausa.github.io/usausa/repo/template-avalonia-embedded.svg)](https://github.com/usausa/template-avalonia-embedded)
 [![Azure Functions template](https://usausa.github.io/usausa/repo/template-azure-functions.svg)](https://github.com/usausa/template-azure-functions)
 [![AWS Lambda template](https://usausa.github.io/usausa/repo/template-aws-lambda.svg)](https://github.com/usausa/template-aws-lambda)
 [![AWS multi-tenant API template](https://usausa.github.io/usausa/repo/template-aws-api-tenant.svg)](https://github.com/usausa/template-aws-api-tenant)
