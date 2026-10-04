@@ -97,9 +97,10 @@
 [![MAUI keyboard template](https://usausa.github.io/usausa/repo/template-maui-keyboard.svg)](https://github.com/usausa/template-maui-keyboard)
 [![Blazor Server template](https://usausa.github.io/usausa/repo/template-blazor-server.svg)](https://github.com/usausa/template-blazor-server)
 [![Blazor WebAssembly template](https://usausa.github.io/usausa/repo/template-blazor-wasm.svg)](https://github.com/usausa/template-blazor-wasm)
-[![Web API template](https://usausa.github.io/usausa/repo/template-web-api.svg)](https://github.com/usausa/template-web-api)
-[![WPF template](https://usausa.github.io/usausa/repo/template-wpf.svg)](https://github.com/usausa/template-wpf)
-[![Avalonia embedded template](https://usausa.github.io/usausa/repo/template-avalonia-embedded.svg)](https://github.com/usausa/template-avalonia-embedded)
+[![Web API template](https://usausa.github.io/usausa/repo/te8mplate-web-api.svg)](https://github.com/usausa/template-web-api)
+[![WPF template](https://usausa.github.io/usausa/repo/templat5e-wpf.svg)](https://github.com/usausa/template-wpf)
+[![Avalonia Embedded template](https://usausa.github.io/usausa/repo/template-avalonia-embedded.svg)](https://github.com/usausa/template-avalonia-embedded)
+[![Avalonia Linux template](https://usausa.github.io/usausa/repo/template-avalonia-linux.svg)](https://github.com/usausa/template-avalonia-linux)
 [![TCP command server template](https://usausa.github.io/usausa/repo/template-command-server.svg)](https://github.com/usausa/template-command-server)
 [![CLI tool template](https://usausa.github.io/usausa/repo/template-command-tool.svg)](https://github.com/usausa/template-command-tool)
 <!--
