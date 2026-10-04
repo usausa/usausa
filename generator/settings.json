@@ -165,28 +165,28 @@
           "label": "Mofucat.DataBridge"
         },
         {
-          "name": "mofucat-serial-io",
-          "label": "Mofucat.SerialIO"
-        },
-        {
-          "name": "mofucat-micro-host",
-          "label": "Mofucat.MicroHost"
-        },
-        {
-          "name": "mofucat-sqlite-configuration",
-          "label": "Mofucat.SqliteConfiguration"
-        },
-        {
-          "name": "mofucat-tcp-service",
-          "label": "Mofucat.TcpService"
-        },
-        {
           "name": "mofucat-job-scheduler",
           "label": "Mofucat.JobScheduler"
         },
         {
           "name": "mofucat-reactive-hub",
           "label": "Mofucat.ReactiveHub"
+        },
+        {
+          "name": "mofucat-serial-io",
+          "label": "Mofucat.SerialIO"
+        },
+        {
+          "name": "mofucat-sqlite-configuration",
+          "label": "Mofucat.SqliteConfiguration"
+        },
+        {
+          "name": "mofucat-micro-host",
+          "label": "Mofucat.MicroHost"
+        },
+        {
+          "name": "mofucat-tcp-service",
+          "label": "Mofucat.TcpService"
         }
       ]
     },
@@ -336,6 +336,14 @@
           "label": "WPF template"
         },
         {
+          "name": "template-avalonia-embedded",
+          "label": "Avalonia embedded template"
+        },
+        {
+          "name": "template-avalonia-linux",
+          "label": "Avalonia linux template"
+        },
+        {
           "name": "template-command-server",
           "label": "TCP command server template"
         },
@@ -370,10 +378,6 @@
         {
           "name": "template-avalonia-desktop",
           "label": "Avalonia desktop template"
-        },
-        {
-          "name": "template-avalonia-embedded",
-          "label": "Avalonia embedded template"
         },
         {
           "name": "template-azure-functions",
