@@ -22,35 +22,35 @@ internal sealed class NuGetClient : IDisposable
     // The search service understands the same owner: syntax as the nuget.org search box, so one query
     // returns exactly the packages the profile page counts. The owner check on each hit is a guard
     // against the syntax being treated as free text.
+    //
+    // Every region the service index lists is asked, and the highest count each package reports wins: a
+    // region can stop refreshing its download counts for days while the others keep moving, and the run
+    // would otherwise report a frozen total depending on which region it happened to pick.
     public async Task<NuGetStat> GetStatAsync(NuGetSettings settings, int topCount)
     {
-        var search = await GetSearchUrlAsync();
         var packages = new Dictionary<string, long>(StringComparer.OrdinalIgnoreCase);
+        var failures = new List<string>();
 
-        var skip = 0;
-        while (true)
+        foreach (var search in await GetSearchUrlsAsync())
         {
-            var url = $"{search}?q={Uri.EscapeDataString($"owner:{settings.Owner}")}&take={PageSize}&skip={skip}&prerelease=true&semVerLevel=2.0.0";
-            using var document = await GetJsonAsync(url);
-
-            var data = document.RootElement.GetProperty("data");
-            var count = data.GetArrayLength();
-            foreach (var package in data.EnumerateArray())
+            try
             {
-                if (!package.TryGetProperty("owners", out var owners) ||
-                    !owners.EnumerateArray().Any(x => String.Equals(x.GetString(), settings.Owner, StringComparison.OrdinalIgnoreCase)))
-                {
-                    continue;
-                }
-
-                packages[package.GetProperty("id").GetString()!] = package.GetProperty("totalDownloads").GetInt64();
+                await ReadOwnedPackagesAsync(search, settings.Owner, packages);
             }
-
-            skip += count;
-            if ((count == 0) || (count < PageSize) || (skip >= document.RootElement.GetProperty("totalHits").GetInt32()))
+            catch (Exception e) when (e is HttpRequestException or TaskCanceledException or JsonException)
             {
-                break;
+                failures.Add($"{search}: {e.Message}");
             }
+        }
+
+        if (packages.Count == 0)
+        {
+            throw new InvalidOperationException($"No NuGet search endpoint answered. {String.Join("; ", failures)}");
+        }
+
+        foreach (var failure in failures)
+        {
+            Console.Error.WriteLine($"  warning: search endpoint skipped, {failure}");
         }
 
         var top = packages
@@ -62,18 +62,47 @@ internal sealed class NuGetClient : IDisposable
         return new NuGetStat(packages.Count, packages.Values.Sum(), top, packages);
     }
 
-    private async Task<string> GetSearchUrlAsync()
+    private async Task ReadOwnedPackagesAsync(string search, string owner, Dictionary<string, long> packages)
+    {
+        var skip = 0;
+        while (true)
+        {
+            var url = $"{search}?q={Uri.EscapeDataString($"owner:{owner}")}&take={PageSize}&skip={skip}&prerelease=true&semVerLevel=2.0.0";
+            using var document = await GetJsonAsync(url);
+
+            var data = document.RootElement.GetProperty("data");
+            var count = data.GetArrayLength();
+            foreach (var package in data.EnumerateArray())
+            {
+                if (!package.TryGetProperty("owners", out var owners) ||
+                    !owners.EnumerateArray().Any(x => String.Equals(x.GetString(), owner, StringComparison.OrdinalIgnoreCase)))
+                {
+                    continue;
+                }
+
+                var id = package.GetProperty("id").GetString()!;
+                var downloads = package.GetProperty("totalDownloads").GetInt64();
+                packages[id] = packages.TryGetValue(id, out var current) ? Math.Max(current, downloads) : downloads;
+            }
+
+            skip += count;
+            if ((count == 0) || (count < PageSize) || (skip >= document.RootElement.GetProperty("totalHits").GetInt32()))
+            {
+                break;
+            }
+        }
+    }
+
+    private async Task<string[]> GetSearchUrlsAsync()
     {
         using var document = await GetJsonAsync(ServiceIndex);
 
-        var resources = document.RootElement.GetProperty("resources").EnumerateArray().ToArray();
-        var resource = resources.FirstOrDefault(static x => x.GetProperty("@type").GetString() == "SearchQueryService");
-        if (resource.ValueKind == JsonValueKind.Undefined)
-        {
-            resource = resources.First(static x => x.GetProperty("@type").GetString()?.StartsWith("SearchQueryService", StringComparison.Ordinal) == true);
-        }
-
-        return resource.GetProperty("@id").GetString()!;
+        return [.. document.RootElement
+            .GetProperty("resources")
+            .EnumerateArray()
+            .Where(static x => x.GetProperty("@type").GetString()?.StartsWith("SearchQueryService", StringComparison.Ordinal) == true)
+            .Select(static x => x.GetProperty("@id").GetString()!)
+            .Distinct(StringComparer.OrdinalIgnoreCase)];
     }
 
     private async Task<JsonDocument> GetJsonAsync(string url)
