@@ -1,12 +1,20 @@
+using System.Globalization;
 using System.Net.Http.Headers;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace StatsGenerator;
 
 internal sealed class NuGetClient : IDisposable
 {
     private const string ServiceIndex = "https://api.nuget.org/v3/index.json";
+    private const string ProfilePage = "https://www.nuget.org/profiles/";
     private const int PageSize = 200;
+
+    // The two numbers the profile page prints above the package list.
+    private static readonly Regex ProfileStatistic = new(
+        """<div class="value">([0-9,]+)</div>\s*<div class="description">(Packages|Total downloads of packages)</div>""",
+        RegexOptions.IgnoreCase);
 
     private readonly HttpClient client;
 
@@ -59,7 +67,55 @@ internal sealed class NuGetClient : IDisposable
             .Take(topCount)
             .ToArray();
 
-        return new NuGetStat(packages.Count, packages.Values.Sum(), top, packages);
+        // The search index is rebuilt on its own schedule and can sit on the same counts for days, so the
+        // totals come from the profile page, which reads the gallery itself and is what the owner sees.
+        // Per-package counts stay with the search index: it is the only API that reports them.
+        var totals = await GetProfileTotalsAsync(settings.Owner);
+        var count = packages.Count;
+        var downloads = packages.Values.Sum();
+        if (totals is var (profilePackages, profileDownloads) && (profileDownloads >= downloads))
+        {
+            count = Math.Max(count, profilePackages);
+            downloads = profileDownloads;
+        }
+        else
+        {
+            Console.Error.WriteLine("  warning: profile page totals unavailable, falling back to the search index");
+        }
+
+        return new NuGetStat(count, downloads, top, packages);
+    }
+
+    private async Task<(int Packages, long Downloads)?> GetProfileTotalsAsync(string owner)
+    {
+        string page;
+        try
+        {
+            using var response = await client.GetAsync($"{ProfilePage}{Uri.EscapeDataString(owner)}");
+            response.EnsureSuccessStatusCode();
+            page = await response.Content.ReadAsStringAsync();
+        }
+        catch (Exception e) when (e is HttpRequestException or TaskCanceledException)
+        {
+            return null;
+        }
+
+        var packages = default(int?);
+        var downloads = default(long?);
+        foreach (var match in ProfileStatistic.Matches(page).Cast<Match>())
+        {
+            var value = Int64.Parse(match.Groups[1].Value.Replace(",", String.Empty, StringComparison.Ordinal), CultureInfo.InvariantCulture);
+            if (match.Groups[2].Value.StartsWith("Packages", StringComparison.OrdinalIgnoreCase))
+            {
+                packages = (int)value;
+            }
+            else
+            {
+                downloads = value;
+            }
+        }
+
+        return (packages is not null) && (downloads is not null) ? (packages.Value, downloads.Value) : null;
     }
 
     private async Task ReadOwnedPackagesAsync(string search, string owner, Dictionary<string, long> packages)
