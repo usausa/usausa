@@ -90,6 +90,10 @@
 [![Windows Service remote deploy tool](https://usausa.github.io/usausa/repo/service-deploy-agent.svg)](https://github.com/usausa/service-deploy-agent)
 [![Image generator MCP server](https://usausa.github.io/usausa/repo/mcp-image-generator.svg)](https://github.com/usausa/mcp-image-generator)
 
+# :game_die: Toy
+
+[![GonFox.GameBoy](https://usausa.github.io/usausa/repo/gonfox-gb.svg)](https://github.com/usausa/gonfox-gb)
+
 # :triangular_ruler: Template
 
 [![MAUI template](https://usausa.github.io/usausa/repo/template-maui.svg)](https://github.com/usausa/template-maui)
