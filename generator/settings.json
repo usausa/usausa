@@ -153,6 +153,10 @@
           "label": "ClamCalendar"
         },
         {
+          "name": "gonfox-gb",
+          "label": "GonFox.GameBoy"
+        },
+        {
           "name": "mini-data-profiler",
           "label": "MiniDataProfiler"
         },
