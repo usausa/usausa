@@ -73,7 +73,7 @@ Deleting `history.json` from `gh-pages` (or running without `--history`) starts 
 and re-seeds the star history.
 
 `downloads.md` lists which packages the gains came from: the leaders of the last 30 days and the top ten of
-each of the last fourteen days. The download trend card in `README.md` links to it on the `gh-pages`
+each of the last seven days. The download trend card in `README.md` links to it on the `gh-pages`
 branch, where GitHub renders it.
 
 ## Settings

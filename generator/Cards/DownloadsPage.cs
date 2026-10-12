@@ -9,7 +9,7 @@ internal static class DownloadsPage
 {
     private const int LeaderboardDays = 30;
     private const int LeaderboardRows = 20;
-    private const int RecentDays = 14;
+    private const int RecentDays = 7;
     private const int DailyRows = 10;
 
     public static string Render(History history, NuGetStat packages, DateOnly today, DateTimeOffset generated)
