@@ -150,6 +150,12 @@ internal sealed class History
         return value;
     }
 
+    // A series that begins after the date has nothing to diff against there, and its first recorded value
+    // is a lifetime total: using it as the baseline keeps a package the index only started reporting from
+    // reading as one enormous day.
+    public static long BaselineAt(IReadOnlyList<Point> series, DateOnly date) =>
+        series.Count == 0 ? 0 : (series[0].Date > date ? series[0].Value : ValueAt(series, date));
+
     public long StarsOf(string name, DateOnly date) => Repositories.TryGetValue(name, out var series) ? ValueAt(series, date) : 0;
 
     public long StarsAt(DateOnly date) => Repositories.Values.Sum(series => ValueAt(series, date));

@@ -5,7 +5,7 @@
 [![Stars](https://usausa.github.io/usausa/stars.svg)](https://github.com/usausa?tab=repositories)
 
 [![NuGet](https://usausa.github.io/usausa/nuget.svg)](https://www.nuget.org/profiles/machi_pon)
-[![NuGet downloads](https://usausa.github.io/usausa/nuget-trend.svg)](https://www.nuget.org/profiles/machi_pon)
+[![NuGet downloads](https://usausa.github.io/usausa/nuget-trend.svg)](https://github.com/usausa/usausa/blob/gh-pages/downloads.md)
 
 # :four_leaf_clover: Smart
 

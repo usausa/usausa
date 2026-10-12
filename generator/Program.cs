@@ -95,6 +95,7 @@ foreach (var entry in settings.AllRepositories)
 var emoji = await EmojiResolver.LoadAsync(token);
 File.WriteAllText(Path.Combine(output, "index.html"), IndexPage.Render(settings, emoji, [.. summary.Keys], DateTimeOffset.UtcNow));
 File.WriteAllText(Path.Combine(output, ".nojekyll"), String.Empty);
+File.WriteAllText(Path.Combine(output, "downloads.md"), DownloadsPage.Render(history, packages, today, DateTimeOffset.UtcNow));
 history.Save(Path.Combine(output, "history.json"));
 
 Console.WriteLine($"Wrote {summary.Count} summary cards and {written} repository cards to {Path.GetFullPath(output)}");

@@ -37,6 +37,7 @@ is what a viewer that ignores the query will show.
 | `contributions.svg` | 804x150 | no, GitHub already draws the calendar on the profile |
 | `repo/<repository>.svg` | 400x72 | yes |
 | `history.json` | - | no, the daily snapshots the trend cards are drawn from |
+| `downloads.md` | - | no, the page the download trend card links to |
 
 The wide cards are exactly two 400px cards plus the space the markdown renderer puts between them, so
 every row in the README lines up. Changing `RepositoryCard.Width` moves the wide cards with it.
@@ -50,7 +51,7 @@ the details after the dash are for GitHub itself.
 
 ## History and the trend cards
 
-`nuget-trend.svg`, `stars.svg` and the `+N` next to the star count on a repository card are drawn from
+`nuget-trend.svg`, `stars.svg`, `downloads.md` and the `+N` next to the star count on a repository card are drawn from
 `history.json`, a file the run reads at the start and writes back into the output directory, so it
 rides along on the `gh-pages` branch. The workflow copies the previous one out of that branch before
 generating; locally, pass `--history path` to keep one between runs.
@@ -70,6 +71,10 @@ Two things follow from the data source:
 
 Deleting `history.json` from `gh-pages` (or running without `--history`) starts the NuGet history over
 and re-seeds the star history.
+
+`downloads.md` lists which packages the gains came from: the leaders of the last 30 days and the top ten of
+each of the last fourteen days. The download trend card in `README.md` links to it on the `gh-pages`
+branch, where GitHub renders it.
 
 ## Settings
 
