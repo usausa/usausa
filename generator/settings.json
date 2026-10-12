@@ -157,6 +157,10 @@
           "label": "ClamGauge"
         },
         {
+          "name": "skia-extension",
+          "label": "SkiaExtension"
+        },
+        {
           "name": "mini-data-profiler",
           "label": "MiniDataProfiler"
         },
