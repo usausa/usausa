@@ -56,8 +56,8 @@ the details after the dash are for GitHub itself.
 rides along on the `gh-pages` branch. The workflow copies the previous one out of that branch before
 generating; locally, pass `--history path` to keep one between runs.
 
-The file holds one snapshot per day: total downloads and package count from NuGet, and stars per
-repository. A series only records a value when it changes, so it stays small. Package points older
+The file holds one snapshot per day: total downloads, package count and per-package downloads from NuGet,
+and stars per repository. A series only records a value when it changes, so it stays small. Package points older
 than `History.DetailDays` are folded into a single carry-over point; star points are kept.
 
 Two things follow from the data source:
@@ -72,9 +72,9 @@ Two things follow from the data source:
 Deleting `history.json` from `gh-pages` (or running without `--history`) starts the NuGet history over
 and re-seeds the star history.
 
-`downloads.md` lists which packages the gains came from: the leaders of the last 30 days and the top ten of
-each of the last seven days. The download trend card in `README.md` links to it on the `gh-pages`
-branch, where GitHub renders it.
+`downloads.md` breaks each of the last seven days into the packages that gained downloads that day; what
+falls past the thirtieth row is folded into one row so the column still adds up. The download trend card in
+`README.md` links to it on the `gh-pages` branch, where GitHub renders it.
 
 ## Settings
 

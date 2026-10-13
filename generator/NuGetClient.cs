@@ -10,10 +10,16 @@ internal sealed class NuGetClient : IDisposable
     private const string ServiceIndex = "https://api.nuget.org/v3/index.json";
     private const string ProfilePage = "https://www.nuget.org/profiles/";
     private const int PageSize = 200;
+    private const int ProfilePageLimit = 50;
 
     // The two numbers the profile page prints above the package list.
     private static readonly Regex ProfileStatistic = new(
         """<div class="value">([0-9,]+)</div>\s*<div class="description">(Packages|Total downloads of packages)</div>""",
+        RegexOptions.IgnoreCase);
+
+    // One row of the package list: the title link, with or without a version, and the download count.
+    private static readonly Regex ProfilePackage = new(
+        """class="package-title"\s+href="/packages/([A-Za-z0-9._-]+)(?:/[^"]*)?"[\s\S]{0,4000}?([0-9,]+)\s*total downloads""",
         RegexOptions.IgnoreCase);
 
     private readonly HttpClient client;
@@ -67,9 +73,9 @@ internal sealed class NuGetClient : IDisposable
             .Take(topCount)
             .ToArray();
 
-        // The search index is rebuilt on its own schedule and can sit on the same counts for days, so the
-        // totals come from the profile page, which reads the gallery itself and is what the owner sees.
-        // Per-package counts stay with the search index: it is the only API that reports them.
+        // The search index is rebuilt on its own schedule and can sit on the same counts for days, so both
+        // the totals and the per-package counts come from the profile page, which reads the gallery itself
+        // and is what the owner sees. The search index stays as the fallback: it is the only API for this.
         var totals = await GetProfileTotalsAsync(settings.Owner);
         var count = packages.Count;
         var downloads = packages.Values.Sum();
@@ -83,7 +89,64 @@ internal sealed class NuGetClient : IDisposable
             Console.Error.WriteLine("  warning: profile page totals unavailable, falling back to the search index");
         }
 
+        var listed = await GetProfilePackagesAsync(settings.Owner);
+        if (listed.Count >= packages.Count)
+        {
+            foreach (var (id, value) in listed)
+            {
+                packages[id] = Math.Max(value, packages.TryGetValue(id, out var current) ? current : 0);
+            }
+
+            top = packages
+                .Select(static x => new PackageStat(x.Key, x.Value))
+                .OrderByDescending(static x => x.Downloads)
+                .Take(topCount)
+                .ToArray();
+        }
+        else
+        {
+            Console.Error.WriteLine($"  warning: profile page listed {listed.Count} of {packages.Count} packages, keeping the search index counts");
+        }
+
         return new NuGetStat(count, downloads, top, packages);
+    }
+
+    // The package list is paged; the pages stop adding names when there are no more.
+    private async Task<Dictionary<string, long>> GetProfilePackagesAsync(string owner)
+    {
+        var packages = new Dictionary<string, long>(StringComparer.OrdinalIgnoreCase);
+        for (var page = 1; page <= ProfilePageLimit; page++)
+        {
+            string html;
+            try
+            {
+                using var response = await client.GetAsync($"{ProfilePage}{Uri.EscapeDataString(owner)}?page={page}");
+                response.EnsureSuccessStatusCode();
+                html = await response.Content.ReadAsStringAsync();
+            }
+            catch (Exception e) when (e is HttpRequestException or TaskCanceledException)
+            {
+                break;
+            }
+
+            var added = 0;
+            foreach (var match in ProfilePackage.Matches(html).Cast<Match>())
+            {
+                var id = match.Groups[1].Value;
+                var value = Int64.Parse(match.Groups[2].Value.Replace(",", String.Empty, StringComparison.Ordinal), CultureInfo.InvariantCulture);
+                if (packages.TryAdd(id, value))
+                {
+                    added++;
+                }
+            }
+
+            if (added == 0)
+            {
+                break;
+            }
+        }
+
+        return packages;
     }
 
     private async Task<(int Packages, long Downloads)?> GetProfileTotalsAsync(string owner)
