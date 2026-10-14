@@ -109,6 +109,7 @@
 [![Avalonia linux template](https://usausa.github.io/usausa/repo/template-avalonia-linux.svg)](https://github.com/usausa/template-avalonia-linux)
 [![TCP command server template](https://usausa.github.io/usausa/repo/template-command-server.svg)](https://github.com/usausa/template-command-server)
 [![CLI tool template](https://usausa.github.io/usausa/repo/template-command-tool.svg)](https://github.com/usausa/template-command-tool)
+[![Library with generator template](https://usausa.github.io/usausa/repo/template-library-with-generator.svg)](https://github.com/usausa/template-library-with-generator)
 <!--
 [![Blazor Server Identity template](https://usausa.github.io/usausa/repo/template-blazor-server-identity.svg)](https://github.com/usausa/template-blazor-server-identity)
 [![Blazor WebAssembly OIDC template](https://usausa.github.io/usausa/repo/template-blazor-wasm-oidc.svg)](https://github.com/usausa/template-blazor-wasm-oidc)
@@ -122,5 +123,4 @@
 [![AWS multi-tenant API template](https://usausa.github.io/usausa/repo/template-aws-api-tenant.svg)](https://github.com/usausa/template-aws-api-tenant)
 [![AWS S3 Blazor WebAssembly template](https://usausa.github.io/usausa/repo/template-aws-s3-wasm.svg)](https://github.com/usausa/template-aws-s3-wasm)
 [![LINE Mini App template](https://usausa.github.io/usausa/repo/template-aws-line-miniapp.svg)](https://github.com/usausa/template-aws-line-miniapp)
-[![Library with generator template](https://usausa.github.io/usausa/repo/template-library-with-generator.svg)](https://github.com/usausa/template-library-with-generator)
 -->

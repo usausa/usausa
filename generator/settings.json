@@ -369,6 +369,10 @@
           "label": "CLI tool template"
         },
         {
+          "name": "template-library-with-generator",
+          "label": "Library with generator template"
+        },
+        {
           "name": "template-blazor-server-identity",
           "label": "Blazor Server Identity template"
         },
@@ -415,10 +419,6 @@
         {
           "name": "template-aws-line-miniapp",
           "label": "LINE Mini App template"
-        },
-        {
-          "name": "template-library-with-generator",
-          "label": "Library with generator template"
         }
       ]
     }
