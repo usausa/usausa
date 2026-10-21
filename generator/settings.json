@@ -157,6 +157,10 @@
           "label": "ClamGauge"
         },
         {
+          "name": "clam-chart",
+          "label": "ClamChart"
+        },
+        {
           "name": "skia-extension",
           "label": "SkiaExtension"
         },
