@@ -104,6 +104,7 @@
 [![MAUI server template](https://usausa.github.io/usausa/repo/template-maui-server.svg)](https://github.com/usausa/template-maui-server)
 [![MAUI template](https://usausa.github.io/usausa/repo/template-maui.svg)](https://github.com/usausa/template-maui)
 [![MAUI keyboard template](https://usausa.github.io/usausa/repo/template-maui-keyboard.svg)](https://github.com/usausa/template-maui-keyboard)
+[![MAUI kiosk template](https://usausa.github.io/usausa/repo/template-maui-kiosk.svg)](https://github.com/usausa/template-maui-kiosk)
 [![MAUI Blazor Hybrid template](https://usausa.github.io/usausa/repo/template-maui-blazor.svg)](https://github.com/usausa/template-maui-blazor)
 [![WPF template](https://usausa.github.io/usausa/repo/template-wpf.svg)](https://github.com/usausa/template-wpf)
 [![Avalonia embedded template](https://usausa.github.io/usausa/repo/template-avalonia-embedded.svg)](https://github.com/usausa/template-avalonia-embedded)

@@ -325,20 +325,8 @@
       "title": ":triangular_ruler: Template",
       "repositories": [
         {
-          "name": "template-maui",
-          "label": "MAUI template"
-        },
-        {
-          "name": "template-maui-server",
-          "label": "MAUI server template"
-        },
-        {
-          "name": "template-maui-blazor",
-          "label": "MAUI Blazor Hybrid template"
-        },
-        {
-          "name": "template-maui-keyboard",
-          "label": "MAUI keyboard template"
+          "name": "template-web-api",
+          "label": "Web API template"
         },
         {
           "name": "template-blazor-server",
@@ -349,8 +337,24 @@
           "label": "Blazor WebAssembly template"
         },
         {
-          "name": "template-web-api",
-          "label": "Web API template"
+          "name": "template-maui-server",
+          "label": "MAUI server template"
+        },
+        {
+          "name": "template-maui",
+          "label": "MAUI template"
+        },
+        {
+          "name": "template-maui-keyboard",
+          "label": "MAUI keyboard template"
+        },
+        {
+          "name": "template-maui-kiosk",
+          "label": "MAUI kiosk template"
+        },
+        {
+          "name": "template-maui-blazor",
+          "label": "MAUI Blazor Hybrid template"
         },
         {
           "name": "template-wpf",
