@@ -12,6 +12,10 @@ internal sealed class NuGetClient : IDisposable
     private const int PageSize = 200;
     private const int ProfilePageLimit = 50;
 
+    // The profile page total and the sum of the package counts are computed at their own pace, so the
+    // total can sit a little under them; this far under means the page did not parse into the number.
+    private const double PlausibleTotal = 0.9;
+
     // The two numbers the profile page prints above the package list.
     private static readonly Regex ProfileStatistic = new(
         """<div class="value">([0-9,]+)</div>\s*<div class="description">(Packages|Total downloads of packages)</div>""",
@@ -79,14 +83,20 @@ internal sealed class NuGetClient : IDisposable
         var totals = await GetProfileTotalsAsync(settings.Owner);
         var count = packages.Count;
         var downloads = packages.Values.Sum();
-        if (totals is var (profilePackages, profileDownloads) && (profileDownloads >= downloads))
+        if (totals is null)
         {
-            count = Math.Max(count, profilePackages);
-            downloads = profileDownloads;
+            Console.Error.WriteLine("  warning: profile page totals unavailable, falling back to the search index");
+        }
+        else if (totals.Value.Downloads < (long)(downloads * PlausibleTotal))
+        {
+            // Far below the packages it is the total of: the page parsed into something that is not the
+            // number. A total slightly under them is normal, the gallery computes the two at its own pace.
+            Console.Error.WriteLine($"  warning: profile page reported {totals.Value.Downloads:N0} against {downloads:N0} in packages, falling back to the search index");
         }
         else
         {
-            Console.Error.WriteLine("  warning: profile page totals unavailable, falling back to the search index");
+            count = Math.Max(count, totals.Value.Packages);
+            downloads = totals.Value.Downloads;
         }
 
         var listed = await GetProfilePackagesAsync(settings.Owner);
