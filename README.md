@@ -51,6 +51,8 @@
 [![ClamGauge](https://usausa.github.io/usausa/repo/clam-gauge.svg)](https://github.com/usausa/clam-gauge)
 [![ClamChart](https://usausa.github.io/usausa/repo/clam-chart.svg)](https://github.com/usausa/clam-chart)
 [![SkiaExtension](https://usausa.github.io/usausa/repo/skia-extension.svg)](https://github.com/usausa/skia-extension)
+[![Components.Maui](https://usausa.github.io/usausa/repo/MauiComponents.svg)](https://github.com/usausa/MauiComponents)
+[![Components.Blazor](https://usausa.github.io/usausa/repo/BlazorComponents.svg)](https://github.com/usausa/BlazorComponents)
 [![MiniDataProfiler](https://usausa.github.io/usausa/repo/mini-data-profiler.svg)](https://github.com/usausa/mini-data-profiler)
 [![NpgsqlBulkHelper](https://usausa.github.io/usausa/repo/npgsql-bulk-helper.svg)](https://github.com/usausa/npgsql-bulk-helper)
 [![Mofucat.DataBridge](https://usausa.github.io/usausa/repo/mofucat-data-bridge.svg)](https://github.com/usausa/mofucat-data-bridge)

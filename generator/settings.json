@@ -165,6 +165,14 @@
           "label": "SkiaExtension"
         },
         {
+          "name": "MauiComponents",
+          "label": "Components.Maui"
+        },
+        {
+          "name": "BlazorComponents",
+          "label": "Components.Blazor"
+        },
+        {
           "name": "mini-data-profiler",
           "label": "MiniDataProfiler"
         },
