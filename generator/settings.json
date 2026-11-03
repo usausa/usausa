@@ -137,6 +137,14 @@
       "title": ":wrench: Helper",
       "repositories": [
         {
+          "name": "MauiComponents",
+          "label": "Components.Maui"
+        },
+        {
+          "name": "BlazorComponents",
+          "label": "Components.Blazor"
+        },
+        {
           "name": "Rester",
           "label": "Rester"
         },
@@ -167,14 +175,6 @@
         {
           "name": "skia-extension",
           "label": "SkiaExtension"
-        },
-        {
-          "name": "MauiComponents",
-          "label": "Components.Maui"
-        },
-        {
-          "name": "BlazorComponents",
-          "label": "Components.Blazor"
         },
         {
           "name": "mini-data-profiler",
