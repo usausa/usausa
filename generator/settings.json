@@ -161,6 +161,10 @@
           "label": "ClamChart"
         },
         {
+          "name": "mussel-chart",
+          "label": "MusselChart"
+        },
+        {
           "name": "skia-extension",
           "label": "SkiaExtension"
         },

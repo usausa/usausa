@@ -52,6 +52,7 @@
 [![ClamCalendar](https://usausa.github.io/usausa/repo/clam-calendar.svg)](https://github.com/usausa/clam-calendar)
 [![ClamGauge](https://usausa.github.io/usausa/repo/clam-gauge.svg)](https://github.com/usausa/clam-gauge)
 [![ClamChart](https://usausa.github.io/usausa/repo/clam-chart.svg)](https://github.com/usausa/clam-chart)
+[![MusselChart](https://usausa.github.io/usausa/repo/mussel-chart.svg)](https://github.com/usausa/mussel-chart)
 [![SkiaExtension](https://usausa.github.io/usausa/repo/skia-extension.svg)](https://github.com/usausa/skia-extension)
 [![MiniDataProfiler](https://usausa.github.io/usausa/repo/mini-data-profiler.svg)](https://github.com/usausa/mini-data-profiler)
 [![NpgsqlBulkHelper](https://usausa.github.io/usausa/repo/npgsql-bulk-helper.svg)](https://github.com/usausa/npgsql-bulk-helper)
