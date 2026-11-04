@@ -153,6 +153,10 @@
           "label": "OysterReport"
         },
         {
+          "name": "mussel-chart",
+          "label": "MusselChart"
+        },
+        {
           "name": "clam-grid",
           "label": "ClamGrid"
         },
@@ -167,10 +171,6 @@
         {
           "name": "clam-chart",
           "label": "ClamChart"
-        },
-        {
-          "name": "mussel-chart",
-          "label": "MusselChart"
         },
         {
           "name": "skia-extension",
@@ -321,6 +321,10 @@
         {
           "name": "mcp-image-generator",
           "label": "Image generator MCP server"
+        },
+        {
+          "name": "camera-service",
+          "label": "Camera service"
         }
       ]
     },
