@@ -124,6 +124,10 @@
           "label": "BunnyTail.EmbeddedBuildProperty"
         },
         {
+          "name": "bunnytail-text-resource",
+          "label": "BunnyTail.TextResource"
+        },
+        {
           "name": "amazon-lambda-extension",
           "label": "AmazonLambdaExtension"
         },
@@ -291,16 +295,8 @@
       "title": ":computer: Service",
       "repositories": [
         {
-          "name": "raccoon-rdp-proxy",
-          "label": "RDP proxy service"
-        },
-        {
-          "name": "raccoon-dns-relay",
-          "label": "DNS relay service"
-        },
-        {
-          "name": "raccoon-auto-port-forward",
-          "label": "Auto port foward service"
+          "name": "camera-service",
+          "label": "Camera service"
         },
         {
           "name": "storage-explore",
@@ -315,16 +311,24 @@
           "label": "Cloud Manager OCI"
         },
         {
+          "name": "raccoon-rdp-proxy",
+          "label": "RDP proxy service"
+        },
+        {
+          "name": "raccoon-dns-relay",
+          "label": "DNS relay service"
+        },
+        {
+          "name": "raccoon-auto-port-forward",
+          "label": "Auto port foward service"
+        },
+        {
           "name": "service-deploy-agent",
           "label": "Windows Service remote deploy tool"
         },
         {
           "name": "mcp-image-generator",
           "label": "Image generator MCP server"
-        },
-        {
-          "name": "camera-service",
-          "label": "Camera service"
         }
       ]
     },
