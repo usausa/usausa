@@ -116,16 +116,16 @@
           "label": "BunnyTail.ServiceRegistration"
         },
         {
+          "name": "bunnytail-text-resource",
+          "label": "BunnyTail.TextResource"
+        },
+        {
           "name": "bunnytail-xaml-property",
           "label": "BunnyTail.XamlProperty"
         },
         {
           "name": "bunnytail-embedded-build-property",
           "label": "BunnyTail.EmbeddedBuildProperty"
-        },
-        {
-          "name": "bunnytail-text-resource",
-          "label": "BunnyTail.TextResource"
         },
         {
           "name": "amazon-lambda-extension",
@@ -159,6 +159,10 @@
         {
           "name": "mussel-chart",
           "label": "MusselChart"
+        },
+        {
+          "name": "mussel-sheet",
+          "label": "MusselSheet"
         },
         {
           "name": "clam-grid",
