@@ -165,6 +165,14 @@
           "label": "MusselSheet"
         },
         {
+          "name": "mussel-calendar",
+          "label": "MusselCalendar"
+        },
+        {
+          "name": "mussel-diagram",
+          "label": "MusselDiagram"
+        },
+        {
           "name": "clam-grid",
           "label": "ClamGrid"
         },

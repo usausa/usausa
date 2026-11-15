@@ -51,6 +51,8 @@
 [![OysterReport](https://usausa.github.io/usausa/repo/oyster-report.svg)](https://github.com/usausa/oyster-report)
 [![MusselChart](https://usausa.github.io/usausa/repo/mussel-chart.svg)](https://github.com/usausa/mussel-chart)
 [![MusselSheet](https://usausa.github.io/usausa/repo/mussel-sheet.svg)](https://github.com/usausa/mussel-sheet)
+[![MusselCalendar](https://usausa.github.io/usausa/repo/mussel-calendar.svg)](https://github.com/usausa/mussel-calendar)
+[![MusselDiagram](https://usausa.github.io/usausa/repo/mussel-diagram.svg)](https://github.com/usausa/mussel-diagram)
 [![ClamGrid](https://usausa.github.io/usausa/repo/clam-grid.svg)](https://github.com/usausa/clam-grid)
 [![ClamCalendar](https://usausa.github.io/usausa/repo/clam-calendar.svg)](https://github.com/usausa/clam-calendar)
 [![ClamGauge](https://usausa.github.io/usausa/repo/clam-gauge.svg)](https://github.com/usausa/clam-gauge)
