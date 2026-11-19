@@ -104,6 +104,10 @@
 
 [![GonFox.GameBoy](https://usausa.github.io/usausa/repo/gonfox-gb.svg)](https://github.com/usausa/gonfox-gb)
 
+# :books: Knowledge
+
+[![.NET performance guide](https://usausa.github.io/usausa/repo/dotnet-performance.svg)](https://github.com/usausa/dotnet-performance)
+
 # :triangular_ruler: Template
 
 [![Web API template](https://usausa.github.io/usausa/repo/template-web-api.svg)](https://github.com/usausa/template-web-api)

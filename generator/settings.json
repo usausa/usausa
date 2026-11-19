@@ -157,20 +157,20 @@
           "label": "OysterReport"
         },
         {
-          "name": "mussel-chart",
-          "label": "MusselChart"
-        },
-        {
           "name": "mussel-sheet",
           "label": "MusselSheet"
         },
         {
-          "name": "mussel-calendar",
-          "label": "MusselCalendar"
-        },
-        {
           "name": "mussel-diagram",
           "label": "MusselDiagram"
+        },
+        {
+          "name": "mussel-chart",
+          "label": "MusselChart"
+        },
+        {
+          "name": "mussel-calendar",
+          "label": "MusselCalendar"
         },
         {
           "name": "clam-grid",
@@ -350,6 +350,15 @@
         {
           "name": "gonfox-gb",
           "label": "GonFox.GameBoy"
+        }
+      ]
+    },
+    {
+      "title": ":books: Knowledge",
+      "repositories": [
+        {
+          "name": "dotnet-performance",
+          "label": ".NET performance guide"
         }
       ]
     },
