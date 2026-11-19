@@ -17,6 +17,7 @@
 [![Smart.Windows](https://usausa.github.io/usausa/repo/Smart-Net-Windows.svg)](https://github.com/usausa/Smart-Net-Windows)
 [![Smart.Maui](https://usausa.github.io/usausa/repo/Smart-Net-Maui.svg)](https://github.com/usausa/Smart-Net-Maui)
 [![Smart.Avalonia](https://usausa.github.io/usausa/repo/Smart-Net-Avalonia.svg)](https://github.com/usausa/Smart-Net-Avalonia)
+[![Smart.WinUI](https://usausa.github.io/usausa/repo/Smart-Net-WinUI.svg)](https://github.com/usausa/Smart-Net-WinUI)
 [![Smart.CommandLine](https://usausa.github.io/usausa/repo/Smart-Net-CommandLine.svg)](https://github.com/usausa/Smart-Net-CommandLine)
 [![Smart.Text.Japanease](https://usausa.github.io/usausa/repo/Smart-Net-Text-Japanese.svg)](https://github.com/usausa/Smart-Net-Text-Japanese)
 [![Smart.Data](https://usausa.github.io/usausa/repo/Smart-Net-Data.svg)](https://github.com/usausa/Smart-Net-Data)
@@ -42,6 +43,7 @@
 [![BunnyTail.EmbeddedBuildProperty](https://usausa.github.io/usausa/repo/bunnytail-embedded-build-property.svg)](https://github.com/usausa/bunnytail-embedded-build-property)
 [![AmazonLambdaExtension](https://usausa.github.io/usausa/repo/amazon-lambda-extension.svg)](https://github.com/usausa/amazon-lambda-extension)
 [![AzureFunctionsExtension](https://usausa.github.io/usausa/repo/azure-functions-extension.svg)](https://github.com/usausa/azure-functions-extension)
+[![SourceGenerateHelper](https://usausa.github.io/usausa/repo/source-generate-helper.svg)](https://github.com/usausa/source-generate-helper)
 
 # :wrench: Helper
 
@@ -79,6 +81,7 @@
 [![RaspberryDotNet](https://usausa.github.io/usausa/repo/raspberrypi-dotnet.svg)](https://github.com/usausa/raspberrypi-dotnet)
 [![RS-WFWATTCH2 library](https://usausa.github.io/usausa/repo/devicelib-wfwattch2.svg)](https://github.com/usausa/devicelib-wfwattch2)
 [![OMRON 2JCIE-BU library](https://usausa.github.io/usausa/repo/devicelib-sensor-omron.svg)](https://github.com/usausa/devicelib-sensor-omron)
+[![Streacom VU1 library](https://usausa.github.io/usausa/repo/devicelib-vudials.svg)](https://github.com/usausa/devicelib-vudials)
 [![PATLITE Tool](https://usausa.github.io/usausa/repo/patlite-tool.svg)](https://github.com/usausa/patlite-tool)
 [![M5Lite](https://usausa.github.io/usausa/repo/M5Lite.svg)](https://github.com/usausa/M5Lite)
 [![MCP2221 unmaged wrapper](https://usausa.github.io/usausa/repo/mcp2221-managed-wrapper.svg)](https://github.com/usausa/mcp2221-managed-wrapper)

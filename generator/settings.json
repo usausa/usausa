@@ -43,6 +43,10 @@
           "label": "Smart.Avalonia"
         },
         {
+          "name": "Smart-Net-WinUI",
+          "label": "Smart.WinUI"
+        },
+        {
           "name": "Smart-Net-CommandLine",
           "label": "Smart.CommandLine"
         },
@@ -134,6 +138,10 @@
         {
           "name": "azure-functions-extension",
           "label": "AzureFunctionsExtension"
+        },
+        {
+          "name": "source-generate-helper",
+          "label": "SourceGenerateHelper"
         }
       ]
     },
@@ -268,6 +276,10 @@
         {
           "name": "devicelib-sensor-omron",
           "label": "OMRON 2JCIE-BU library"
+        },
+        {
+          "name": "devicelib-vudials",
+          "label": "Streacom VU1 library"
         },
         {
           "name": "patlite-tool",
