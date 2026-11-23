@@ -282,6 +282,10 @@
           "label": "Streacom VU1 library"
         },
         {
+          "name": "devicelib-battery",
+          "label": "Device battery library"
+        },
+        {
           "name": "patlite-tool",
           "label": "PATLITE Tool"
         },

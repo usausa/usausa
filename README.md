@@ -82,6 +82,7 @@
 [![RS-WFWATTCH2 library](https://usausa.github.io/usausa/repo/devicelib-wfwattch2.svg)](https://github.com/usausa/devicelib-wfwattch2)
 [![OMRON 2JCIE-BU library](https://usausa.github.io/usausa/repo/devicelib-sensor-omron.svg)](https://github.com/usausa/devicelib-sensor-omron)
 [![Streacom VU1 library](https://usausa.github.io/usausa/repo/devicelib-vudials.svg)](https://github.com/usausa/devicelib-vudials)
+[![Device battery library](https://usausa.github.io/usausa/repo/devicelib-battery.svg)](https://github.com/usausa/devicelib-battery)
 [![PATLITE Tool](https://usausa.github.io/usausa/repo/patlite-tool.svg)](https://github.com/usausa/patlite-tool)
 [![M5Lite](https://usausa.github.io/usausa/repo/M5Lite.svg)](https://github.com/usausa/M5Lite)
 [![MCP2221 unmaged wrapper](https://usausa.github.io/usausa/repo/mcp2221-managed-wrapper.svg)](https://github.com/usausa/mcp2221-managed-wrapper)
